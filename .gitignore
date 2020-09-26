@@ -1,3 +1,5 @@
+.venv
+
 instance
 .idea/
 .DS_Store
