@@ -1,10 +1,7 @@
 # -*- coding: utf8 -*-
 import logging
 
-logger = logging.getLogger(__name__)
-print(f"zeeguu_core initialized logger with name: {logger.name}")
 
-logging.basicConfig(format="%(asctime)s %(levelname)s %(name)s %(message)s")
 
 
 def info(msg):
@@ -29,3 +26,8 @@ def critical(msg):
 def logp(msg):
     log(msg)
     print(msg)
+
+if __name__ == "__main__":
+    logger = logging.getLogger(__name__)
+    logp(f"zeeguu_core initialized logger with name: {logger.name}")
+    logging.basicConfig(format="%(asctime)s %(levelname)s %(name)s %(message)s")
