@@ -9,6 +9,8 @@ from zeeguu_core.configuration.configuration import load_configuration_or_abort
 # If zeeguu_core.app is already defined we use that object
 # as the app for the db_init that we do later. If not,
 # we create the app here and load the corresponding configuration
+
+# TODO remove sideefect.. find all usages of zeeguu_core
 if not hasattr(zeeguu_core, "app"):
     zeeguu_core.app = Flask("Zeeguu-Core")
     load_configuration_or_abort(zeeguu_core.app, 'ZEEGUU_CORE_CONFIG',
@@ -78,6 +80,7 @@ from .user_exercise_session import UserExerciseSession
 from zeeguu_core.model.bookmark_priority_arts import BookmarkPriorityARTS
 
 # Creating the DB tables if needed
+#
 # Note that this must be called after all the model classes are loaded
 zeeguu_core.db.init_app(zeeguu_core.app)
 zeeguu_core.db.create_all(app=zeeguu_core.app)

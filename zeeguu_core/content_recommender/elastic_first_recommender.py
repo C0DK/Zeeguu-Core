@@ -3,7 +3,7 @@
     If it fails, falls back on the mixed recommender
 
 """
-from zeeguu_core import logp as log
+from zeeguu_core.logs import logp as log
 
 from .elastic_recommender import (
     article_recommendations_for_user as elastic_article_recommendations_for_user,

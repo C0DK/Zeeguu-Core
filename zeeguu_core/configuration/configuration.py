@@ -27,7 +27,7 @@ def load_configuration_or_abort(app, environ_variable, mandatory_config_keys=[])
             print(("ZEEGUU: Loaded {0} config from {1}".format(app.name, config_file)))
         except Exception as e:
             print(str(e))
-            exit(-1)
+            sys.exit(-1)
 
 
 def _assert_configs(config, required_keys, config_file_name=None):
@@ -36,7 +36,7 @@ def _assert_configs(config, required_keys, config_file_name=None):
         if config_value is None:
             print("Please define the {key} key in the {config} file!".format(key=key,
                                                                              config=config_file_name or 'config'))
-            exit(-1)
+            sys.exit(-1)
 
 
 def _called_from_within_a_test():
@@ -61,4 +61,4 @@ def _load_config_file(environ_variable, mandatory_config_keys):
     except Exception as e:
         print(f"You must define an envvar named {environ_variable} which points to a config file which")
         print(f'defines at least the following constants: {mandatory_config_keys}')
-        exit(0)
+        sys.exit(0)

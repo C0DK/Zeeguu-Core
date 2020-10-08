@@ -9,7 +9,7 @@ import zeeguu_core
 from sqlalchemy import Column, ForeignKey, Integer, func
 from sqlalchemy.orm import relationship
 from sqlalchemy.orm.exc import NoResultFound
-from zeeguu_core import util, logger
+from zeeguu_core import util, logs
 from zeeguu_core.language.difficulty_estimator_factory import DifficultyEstimatorFactory
 from zeeguu_core.model import Language
 
@@ -121,7 +121,7 @@ class User(db.Model):
         # Must have this import here to avoid circular dependency
 
         preference = UserPreference.get_difficulty_estimator(self) or "FleschKincaidDifficultyEstimator"
-        logger.debug(f"Difficulty estimator for user {self.id}: {preference}")
+        logs.debug(f"Difficulty estimator for user {self.id}: {preference}")
         return preference
 
     def text_difficulty(self, text, language):
@@ -216,7 +216,7 @@ class User(db.Model):
         """
         
         :param password: str
-        :return: 
+        :return:
         """
         salt_bytes = "".join(chr(random.randint(0, 255)) for _ in range(32)).encode('utf-8')
 
@@ -301,8 +301,8 @@ class User(db.Model):
 
     def _to_date_dict(self, dict_list, date_key):
         """
-            :param dict_list: a list of dictionaries 
-            :param date_key: the key that maps to the datetime object in the dictionary 
+            :param dict_list: a list of dictionaries
+            :param date_key: the key that maps to the datetime object in the dictionary
             :return: dictionary with dates mapping to a list of dictionaries
         """
         date_dict = dict()
@@ -314,8 +314,8 @@ class User(db.Model):
 
     def _to_serializable(self, tuple_list, key_name, *args):
         """
-            :param tuple_list: a list of tuples with 
-                1. position: date  
+            :param tuple_list: a list of tuples with
+                1. position: date
                 2. position: list of objects with 'json_serializable_dict()' method
             :param key_name: the key name of the final serialized objects in the result list
             :param *args: the list of arguments that should be passed down to the 'json_serializable_dict()' method

@@ -1,33 +1,21 @@
-# -*- coding: utf8 -*-
 import logging
+from . import elastic
+from . import emailer
+from . import account_management
+from . import bookmark_quality
+from . import content_recommender
+from . import model
+from . import language
+from . import configuration
+from . import crowd_translations
+from . import util
+from . import definition_of_learned
+from . import language
+from . import word_scheduling
+from . import logs
 
-
-
-
-def info(msg):
-    logger.info(msg)
-
-def debug(msg):
-    logger.debug(msg)
-
-
-def log(msg):
-    info(msg)
-
-
-def warning(msg):
-    logger.warning(msg)
-
-
-def critical(msg):
-    logger.critical(msg)
-
-
-def logp(msg):
-    log(msg)
-    print(msg)
 
 if __name__ == "__main__":
-    logger = logging.getLogger(__name__)
-    logp(f"zeeguu_core initialized logger with name: {logger.name}")
-    logging.basicConfig(format="%(asctime)s %(levelname)s %(name)s %(message)s")
+    logs.logp(f"zeeguu_core initialized logger with name: {logger.name}")
+    logging.basicConfig(
+        format="%(asctime)s %(levelname)s %(name)s %(message)s")
