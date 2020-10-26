@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-import zeeguu_core
+from zeeguu_core.server import db
 from sqlalchemy.orm.exc import NoResultFound
 
 from zeeguu_core.model import Topic, LocalizedTopic, Article, Url
@@ -11,7 +11,7 @@ from zeeguu_core_test.rules.url_rule import UrlRule
 from zeeguu_core_test.rules.user_rule import UserRule
 from zeeguu_core.model.language import Language
 
-session = zeeguu_core.db.session
+session = db.session
 
 
 class LocalizedTopicTest(ModelTestMixIn, TestCase):

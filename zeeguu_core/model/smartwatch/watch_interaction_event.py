@@ -1,7 +1,5 @@
-import zeeguu_core
-
-db = zeeguu_core.db
 from zeeguu_core.model.bookmark import Bookmark
+from zeeguu_core.server import db
 
 
 class WatchInteractionEvent(db.Model):

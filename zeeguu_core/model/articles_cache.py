@@ -1,10 +1,9 @@
 from sqlalchemy.orm import relationship
 
-import zeeguu_core
 
 from sqlalchemy import Column, Integer, String, ForeignKey
 
-db = zeeguu_core.db
+from zeeguu_core.server import db
 
 
 class ArticlesCache(db.Model):

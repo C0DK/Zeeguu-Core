@@ -2,8 +2,7 @@ from zeeguu_core import logs
 
 from sqlalchemy import Column, Integer, String
 
-db = zeeguu_core.db
-
+from zeeguu_core.server import db
 
 class Topic(db.Model):
     """

@@ -1,17 +1,14 @@
 import json
 from datetime import datetime
 
-from sqlalchemy import Column, String, Integer, Boolean, DateTime, ForeignKey
+from sqlalchemy import Boolean, Column, DateTime, ForeignKey, Integer, String
 from sqlalchemy.orm import relationship
-from zeeguu_core.model.user_reading_session import ALL_ARTICLE_INTERACTION_ACTIONS
-
-import zeeguu_core
-
-from zeeguu_core.model import Article, User, Url
-from zeeguu_core.model.user_reading_session import UserReadingSession
-from zeeguu_core.constants import JSON_TIME_FORMAT, UMR_LIKE_ARTICLE_ACTION, UMR_USER_FEEDBACK_ACTION
-
-db = zeeguu_core.db
+from zeeguu_core.constants import (JSON_TIME_FORMAT, UMR_LIKE_ARTICLE_ACTION,
+                                   UMR_USER_FEEDBACK_ACTION)
+from zeeguu_core.model import Article, Url, User
+from zeeguu_core.model.user_reading_session import (
+    ALL_ARTICLE_INTERACTION_ACTIONS, UserReadingSession)
+from zeeguu_core.server import db
 
 
 class UserActivityData(db.Model):
@@ -83,7 +80,8 @@ class UserActivityData(db.Model):
         :param attribute_name -- e.g. "title" in the above exaxmple
         :return: value of attribute
         """
-        start = str(self.extra_data).find("\"" + attribute_name + "\":") + len(attribute_name) + 4
+        start = str(self.extra_data).find(
+            "\"" + attribute_name + "\":") + len(attribute_name) + 4
         end = str(self.extra_data)[start:].find("\"")
         return str(self.extra_data)[start:end + start]
 
@@ -111,7 +109,8 @@ class UserActivityData(db.Model):
     def find(cls,
              user: User = None,
              extra_filter: str = None,
-             extra_value: str = None,  # TODO: to delete this, i don't think it's ever used.
+             # TODO: to delete this, i don't think it's ever used.
+             extra_value: str = None,
              event_filter: str = None,
              only_latest=False):
         """
@@ -135,7 +134,8 @@ class UserActivityData(db.Model):
                 else:
                     return events
 
-            filtered = cls._filter_by_extra_value(events, extra_filter, extra_value)
+            filtered = cls._filter_by_extra_value(
+                events, extra_filter, extra_value)
             if only_latest:
                 return filtered[0]
             else:
@@ -144,7 +144,6 @@ class UserActivityData(db.Model):
             return None
 
     def find_url_in_extra_data(self):
-
         """
             DB structure is a mess!
             There is no convention where the url associated with an event is.
@@ -235,7 +234,8 @@ class UserActivityData(db.Model):
             article_id = int(data['article_id'])
             has_article_id = True
 
-        zeeguu_core.log(f'{event} value[:42]: {value[:42]} extra_data[:42]: {extra_data[:42]} art_id: {article_id}')
+        zeeguu_core.log(
+            f'{event} value[:42]: {value[:42]} extra_data[:42]: {extra_data[:42]} art_id: {article_id}')
 
         new_entry = UserActivityData(user,
                                      time,

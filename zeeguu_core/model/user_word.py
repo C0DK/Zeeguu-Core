@@ -4,10 +4,9 @@ import sqlalchemy.orm
 from sqlalchemy.orm.exc import NoResultFound
 from wordstats import Word
 
-import zeeguu_core
 from zeeguu_core import util
 
-db = zeeguu_core.db
+from zeeguu_core.server import db
 
 from zeeguu_core.model.language import Language
 

@@ -5,8 +5,9 @@ from sqlalchemy.orm.exc import NoResultFound
 from zeeguu_core.model import User
 from zeeguu_core.model.cohort import Cohort
 
+from zeeguu_core.server import db
 
-class TeacherCohortMap(zeeguu_core.db.Model):
+class TeacherCohortMap(db.Model):
     __table_args__ = {'mysql_collate': 'utf8_bin'}
 
     id = Column(Integer, primary_key=True)

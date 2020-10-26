@@ -1,16 +1,12 @@
 from unittest import TestCase
 
-from zeeguu_core_test.model_test_mixin import ModelTestMixIn
-
-import zeeguu_core
-from zeeguu_core_test.rules.article_rule import ArticleRule
-from zeeguu_core_test.rules.language_rule import LanguageRule
-from zeeguu_core_test.rules.user_article_rule import UserArticleRule
-from zeeguu_core_test.rules.user_rule import UserRule
-from zeeguu_core.model import Topic
+from zeeguu_core import server
 from zeeguu_core.model.user_article import UserArticle
 
-session = zeeguu_core.db.session
+from zeeguu_core_test.model_test_mixin import ModelTestMixIn
+from zeeguu_core_test.rules.user_article_rule import UserArticleRule
+
+session = server.db.session
 
 
 class UserArticleTest(ModelTestMixIn, TestCase):
@@ -30,4 +26,5 @@ class UserArticleTest(ModelTestMixIn, TestCase):
 
     def test_all_starred_or_liked_articles(self):
         self.article.star_for_user(session, self.user)
-        assert 1 == len(UserArticle.all_starred_or_liked_articles_of_user(self.user))
+        assert 1 == len(
+            UserArticle.all_starred_or_liked_articles_of_user(self.user))

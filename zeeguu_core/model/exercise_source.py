@@ -1,8 +1,5 @@
 from sqlalchemy.orm.exc import NoResultFound
-
-import zeeguu_core
-
-db = zeeguu_core.db
+from zeeguu_core.server import db
 
 
 class ExerciseSource(db.Model):
@@ -29,7 +26,7 @@ class ExerciseSource(db.Model):
         try:
             source = cls.find(_source)
 
-        except NoResultFound as e:
+        except NoResultFound:
             source = cls(_source)
         except Exception as e:
             raise e

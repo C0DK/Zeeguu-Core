@@ -1,14 +1,15 @@
 from unittest import TestCase
 
-import zeeguu_core
 from sqlalchemy.orm.exc import NoResultFound
+from zeeguu_core.model.language import Language
+from zeeguu_core.server import db
 
 from zeeguu_core_test.model_test_mixin import ModelTestMixIn
 from zeeguu_core_test.rules.language_rule import LanguageRule
 from zeeguu_core_test.rules.user_rule import UserRule
-from zeeguu_core.model.language import Language
 
-session = zeeguu_core.db.session
+session = db.session
+
 
 class LanguageTest(ModelTestMixIn, TestCase):
 
@@ -25,7 +26,7 @@ class LanguageTest(ModelTestMixIn, TestCase):
             assert False, "No Language found in database"
 
         assert language_should_be.code == language_to_check.code \
-               and language_should_be.name == language_to_check.name
+            and language_should_be.name == language_to_check.name
 
     def test_get_all_languages(self):
         languages = LanguageRule.languages

@@ -7,7 +7,7 @@
 """
 
 from sqlalchemy import not_, or_
-from zeeguu_core import info, logger
+from zeeguu_core.logs import info, logger
 from zeeguu_core.model import (
     Article,
     UserArticle,
@@ -21,6 +21,7 @@ from zeeguu_core.model import (
     CohortArticleMap, Language)
 
 from sortedcontainers import SortedList
+from zeeguu_core import server
 
 
 def article_recommendations_for_user(user, count):
@@ -47,7 +48,7 @@ def article_recommendations_for_user(user, count):
         return [user.learned_language]
 
     reading_pref_hash = _reading_preferences_hash(user)
-    _recompute_recommender_cache_if_needed(user, zeeguu_core.db.session)
+    _recompute_recommender_cache_if_needed(user, server.db.session)
     all_articles = ArticlesCache.get_articles_for_hash(reading_pref_hash, count)
     all_articles = [each for each in all_articles if (not each.broken
                                                       and each.published_time)]

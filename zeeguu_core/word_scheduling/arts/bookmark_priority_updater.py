@@ -1,7 +1,6 @@
 import itertools
 import traceback
 
-import zeeguu_core
 from zeeguu_core.model.bookmark_priority_arts import BookmarkPriorityARTS
 from zeeguu_core.model.exercise import Exercise
 from zeeguu_core.model.exercise_source import ExerciseSource
@@ -10,8 +9,9 @@ from zeeguu_core.util.timer_logging_decorator import time_this
 from zeeguu_core.word_scheduling.arts.algorithm_wrapper import AlgorithmWrapper
 from zeeguu_core.word_scheduling.arts.analysis.normal_distribution import NormalDistribution
 from zeeguu_core.word_scheduling.arts.arts_rt import ArtsRT
+from zeeguu_core import logs
 
-db = zeeguu_core.db
+from zeeguu_core.server import db
 
 
 class PriorityInfo:
@@ -51,7 +51,7 @@ class BookmarkPriorityUpdater:
             bookmarks_for_user = user.all_bookmarks_fit_for_study()
             fit_for_study_count = len(bookmarks_for_user)
 
-            zeeguu_core.log(f"{fit_for_study_count} bookmarks fit for study")
+            logs.log(f"{fit_for_study_count} bookmarks fit for study")
             if fit_for_study_count == 0:
                 return
 
@@ -66,7 +66,7 @@ class BookmarkPriorityUpdater:
             with db.session.no_autoflush:  # might not be needed, but just to be safe
                 for each in exercises_and_priorities:
                     entry = BookmarkPriorityARTS.find_or_create(each.bookmark, each.priority)
-                    zeeguu_core.log(
+                    logs.log(
                         f"Updating {each.bookmark.id} with priority: {each.priority} from: {entry.priority}")
                     entry.priority = each.priority
                     db.session.add(entry)

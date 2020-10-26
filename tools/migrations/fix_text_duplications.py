@@ -3,37 +3,40 @@
 # the db ended with quite a bit of duplicated texts
 from collections import defaultdict
 
-data = defaultdict(set)
-from zeeguu_core.model import Text, Bookmark
-import zeeguu_core
+from zeeguu_core.server import db
 
-texts = zeeguu_core.db.session.query(Text).all()
+from zeeguu_core.model import Bookmark, Text
 
-for a in texts:
-    data[a.content.strip()].add(a)
+if __name__ == "__main__":
+    data = defaultdict(set)
+    texts = db.session.query(Text).all()
 
-for content, _texts in data.items():
-    # print (str(len(_texts)))
-    if len(_texts) <= 1:
-        continue
+    for a in texts:
+        data[a.content.strip()].add(a)
 
-    texts = list(_texts)
-    first_text = texts[0]
-    print("found dupe with text : " + str(texts[0].content))
-    print("the first text is: " + str(texts[0].id))
-    print("the rest are: " + str(texts[1:]))
+    for content, _texts in data.items():
+        # print (str(len(_texts)))
+        if len(_texts) <= 1:
+            continue
 
-    # input("Press Enter to remove ...")
+        texts = list(_texts)
+        first_text = texts[0]
+        print("found dupe with text : " + str(texts[0].content))
+        print("the first text is: " + str(texts[0].id))
+        print("the rest are: " + str(texts[1:]))
 
-    for text in texts[1:]:
-        bookmarks = zeeguu_core.db.session.query(Bookmark).filter_by(text=text).all()
-        for bookmark in bookmarks:
-            print("got bookmark {0} that points to text {1} ".format(bookmark.id, text.id))
-            print("will rewire it to point to " + str(first_text.id))
-            bookmark.text = first_text
-            zeeguu_core.db.session.add(bookmark)
-        print("text {0} should be deleted now".format(text.id))
-        zeeguu_core.db.session.delete(text)
-        zeeguu_core.db.session.commit()
+        # input("Press Enter to remove ...")
 
-    print("dupe removed ")
+        for text in texts[1:]:
+            bookmarks = db.session.query(Bookmark).filter_by(text=text).all()
+            for bookmark in bookmarks:
+                print("got bookmark {0} that points to text {1} ".format(
+                    bookmark.id, text.id))
+                print("will rewire it to point to " + str(first_text.id))
+                bookmark.text = first_text
+                db.session.add(bookmark)
+            print("text {0} should be deleted now".format(text.id))
+            db.session.delete(text)
+            db.session.commit()
+
+        print("dupe removed ")

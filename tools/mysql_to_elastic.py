@@ -1,21 +1,15 @@
 # coding=utf-8
-import sqlalchemy as database
-from zeeguu_core.elastic.converting_from_mysql import document_from_article
-from sqlalchemy import func
-from elasticsearch import Elasticsearch
-import zeeguu_core
-from sqlalchemy.orm import sessionmaker
-from zeeguu_core.model import Article
 import sys
 from datetime import datetime
 
-from zeeguu_core.elastic.settings import ES_ZINDEX, ES_CONN_STRING
-
-es = Elasticsearch([ES_CONN_STRING])
-DB_URI = zeeguu_core.app.config["SQLALCHEMY_DATABASE_URI"]
-engine = database.create_engine(DB_URI)
-Session = sessionmaker(bind=engine)
-session = Session()
+import sqlalchemy as database
+from elasticsearch import Elasticsearch
+from sqlalchemy import func
+from sqlalchemy.orm import sessionmaker
+from zeeguu_core.elastic.converting_from_mysql import document_from_article
+from zeeguu_core.elastic.settings import ES_CONN_STRING, ES_ZINDEX
+from zeeguu_core.model import Article
+from zeeguu_core.server import app
 
 
 def main(starting_index, article_batch_size):
@@ -28,8 +22,9 @@ def main(starting_index, article_batch_size):
     for i in range(starting_index, max_id, article_batch_size):
 
         print(i)
-        for article in session.query(Article).order_by(Article.published_time.desc()).limit(article_batch_size).offset(
-                i):
+        for article in session.query(Article).order_by(
+            Article.published_time.desc()
+        ).limit(article_batch_size).offset(i):
             try:
                 doc = document_from_article(article, session)
                 res = es.index(index=ES_ZINDEX, id=article.id, body=doc)
@@ -41,6 +36,11 @@ def main(starting_index, article_batch_size):
 
 
 if __name__ == '__main__':
+    es = Elasticsearch([ES_CONN_STRING])
+    DB_URI = app.config["SQLALCHEMY_DATABASE_URI"]
+    engine = database.create_engine(DB_URI)
+    Session = sessionmaker(bind=engine)
+    session = Session()
 
     print(f"started at: {datetime.now()}")
     starting_index = 0

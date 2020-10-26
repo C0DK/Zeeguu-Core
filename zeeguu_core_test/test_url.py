@@ -1,11 +1,13 @@
 from threading import Thread
 from unittest import TestCase
+
+from zeeguu_core.model import DomainName, Url
+from zeeguu_core.server import db
+
 from zeeguu_core_test.model_test_mixin import ModelTestMixIn
 from zeeguu_core_test.rules.url_rule import UrlRule
-import zeeguu_core.model
-from zeeguu_core.model import Url, DomainName
 
-session = zeeguu_core.db.session
+session = db.session
 
 
 class UrlTest(ModelTestMixIn, TestCase):
@@ -25,7 +27,8 @@ class UrlTest(ModelTestMixIn, TestCase):
             session.add(url)
             session.commit()
 
-        self.assertTrue('Duplicate entry' or 'IntegrityError' in str(context.exception))
+        self.assertTrue(
+            'Duplicate entry' or 'IntegrityError' in str(context.exception))
 
     def test_find_or_create_works(self):
 

@@ -1,5 +1,3 @@
-# -*- coding: utf8 -*-
-
 """
 This file provides a meta-analysis to optimize the parameters of the word scheduling algorithms
  for individual or all users.
@@ -19,12 +17,13 @@ from timeit import default_timer as timer
 
 import flask_sqlalchemy
 import zeeguu_core
+from zeeguu_core import server
 from flask import Flask
-from zeeguu_core.model import User, ExerciseOutcome, Exercise, ExerciseSource
+from zeeguu_core.model import Exercise, ExerciseOutcome, ExerciseSource, User
 from zeeguu_core.word_scheduling.arts.algorithm_wrapper import AlgorithmWrapper
 from zeeguu_core.word_scheduling.arts.arts_rt import ArtsRT
-from zeeguu_core.word_scheduling.arts.bookmark_priority_updater import PriorityInfo, BookmarkPriorityUpdater
-
+from zeeguu_core.word_scheduling.arts.bookmark_priority_updater import (
+    BookmarkPriorityUpdater, PriorityInfo)
 
 #:nocov:
 
@@ -114,18 +113,18 @@ class AlgorithmSimulator:
         self.bookmarks = self.__get_bookmarks_for_user(self.user_id)
 
     def __create_database(self):
-        zeeguu_core.app = Flask("Zeeguu-Core-Test")
+        server.app = Flask("Zeeguu-Core-Test")
 
         config_file = os.path.expanduser('../testing_default.cfg')
         if "CONFIG_FILE" in os.environ:
             config_file = os.environ["CONFIG_FILE"]
-        zeeguu_core.app.config.from_pyfile(config_file,
+        server.app.config.from_pyfile(config_file,
                                            silent=False)  # config.cfg is in the instance folder
 
-        zeeguu_core.db = flask_sqlalchemy.SQLAlchemy(zeeguu_core.app)
-        print(("running with DB: " + zeeguu_core.app.config.get("SQLALCHEMY_DATABASE_URI")))
+        server.db = flask_sqlalchemy.SQLAlchemy(server.app)
+        print(("running with DB: " + server.app.config.get("SQLALCHEMY_DATABASE_URI")))
 
-        zeeguu_core.db.create_all()
+        server.db.create_all()
 
     def set_algorithm_wrapper(self, new_algorithm_wrapper):
         self.algo_wrapper = new_algorithm_wrapper

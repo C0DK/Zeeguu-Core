@@ -1,12 +1,12 @@
 from unittest import TestCase
 from zeeguu_core_test.model_test_mixin import ModelTestMixIn
-import zeeguu_core
+from zeeguu_core.server import db
 from zeeguu_core_test.rules.user_reading_session_rule import ReadingSessionRule
 from zeeguu_core.constants import UMR_OPEN_ARTICLE_ACTION, UMR_ARTICLE_CLOSED_ACTION
 from zeeguu_core.model.user_reading_session import UserReadingSession
 from datetime import datetime, timedelta
 
-db_session = zeeguu_core.db.session
+db_session = db.session
 
 
 class UserReadingSessionTest(ModelTestMixIn, TestCase):

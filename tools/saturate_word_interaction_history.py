@@ -1,28 +1,27 @@
 from datetime import datetime
 
-import zeeguu_core
-from zeeguu_core.model import Bookmark, UserArticle, Text, \
-    UserWord, UserActivityData, Language, Exercise
-
-from zeeguu_core.model.bookmark import bookmark_exercise_mapping, Bookmark
-
-from zeeguu_core.model.word_knowledge.word_interaction_history import WordInteractionHistory,WordInteractionEvent
-
-from zeeguu_core.constants import WIH_READ_NOT_CLICKED_IN_SENTENCE, WIH_READ_NOT_CLICKED_OUT_SENTENCE, \
-    WIH_READ_CLICKED, UMR_USER_FEEDBACK_ACTION
-
-from zeeguu_core.util.text import split_words_from_text
-
 from nltk.stem.snowball import SnowballStemmer
+from zeeguu_core.constants import (UMR_USER_FEEDBACK_ACTION, WIH_READ_CLICKED,
+                                   WIH_READ_NOT_CLICKED_IN_SENTENCE,
+                                   WIH_READ_NOT_CLICKED_OUT_SENTENCE)
+from zeeguu_core.model import (Exercise, Language, Text, UserActivityData,
+                               UserArticle, UserWord)
+from zeeguu_core.model.bookmark import Bookmark, bookmark_exercise_mapping
+from zeeguu_core.model.word_knowledge.word_interaction_history import (
+    WordInteractionEvent, WordInteractionHistory)
+from zeeguu_core.util.text import split_words_from_text
+from zeeguu_core.server import db
 
 LOG_CONTEXT = "FEED RETRIEVAL"
 ARTICLE_FULLY_READ = "finished%"
 LONG_TIME_IN_THE_PAST = "2000-01-01T00:00:00"
 
-session = zeeguu_core.db.session
+
+session = db.session
 
 
-def extract_words_from_text(text, language:Language, stem: bool = True):  # Tokenize the words and create a set of unique words
+def extract_words_from_text(text, language:Language, stem: bool = True)
+    """Tokenize the words and create a set of unique words"""
     words = split_words_from_text(text)
 
     if stem:
@@ -183,4 +182,3 @@ for bm_id, ex_id in bmex_mapping:
     wih.insert_event(word_interaction_event, ex.time)
 
     wih.save_to_db(session)
-

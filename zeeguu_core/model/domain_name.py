@@ -1,14 +1,9 @@
+import logging
 import re
-
-import sqlalchemy
-from sqlalchemy.orm.exc import NoResultFound
 import time
 
-import logging
-
-import zeeguu_core
-
-db = zeeguu_core.db
+import sqlalchemy
+from zeeguu_core.server import db
 
 
 class DomainName(db.Model):

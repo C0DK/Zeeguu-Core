@@ -1,5 +1,3 @@
-# -*- coding: utf8 -*-
-
 import time
 from datetime import datetime
 
@@ -7,13 +5,10 @@ import feedparser
 import requests
 import sqlalchemy.orm.exc
 from sqlalchemy.orm.exc import NoResultFound
-
-import zeeguu_core
-from zeeguu_core.constants import JSON_TIME_FORMAT, SIMPLE_TIME_FORMAT
+from zeeguu_core.constants import SIMPLE_TIME_FORMAT
 from zeeguu_core.model.language import Language
 from zeeguu_core.model.url import Url
-
-db = zeeguu_core.db
+from zeeguu_core.server import db
 
 
 class RSSFeed(db.Model):

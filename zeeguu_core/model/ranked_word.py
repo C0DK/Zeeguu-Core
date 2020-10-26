@@ -1,9 +1,8 @@
 import sqlalchemy.orm
-import zeeguu_core
 
 from zeeguu_core.model.language import Language
 
-db = zeeguu_core.db
+from zeeguu_core.server import db
 
 
 class WordForm(db.Model):

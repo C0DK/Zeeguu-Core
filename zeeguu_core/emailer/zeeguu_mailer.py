@@ -1,6 +1,6 @@
 from smtplib import SMTP
 
-from zeeguu_api.app import app
+from zeeguu_api.server import app
 from zeeguu_core import logger
 
 

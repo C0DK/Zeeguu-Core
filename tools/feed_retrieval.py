@@ -22,8 +22,7 @@ import zeeguu_core
 from zeeguu_core import log
 from zeeguu_core.content_retriever.article_downloader import download_from_feed
 from zeeguu_core.model import RSSFeed
-
-session = zeeguu_core.db.session
+from zeeguu_core.server import db
 
 
 def retrieve_articles_from_all_feeds():
@@ -37,11 +36,12 @@ def retrieve_articles_from_all_feeds():
             log("")
             log(f"{msg}")
 
-            download_from_feed(feed, zeeguu_core.db.session)
+            download_from_feed(feed, db.session)
 
         except Exception as e:
             traceback.print_exc()
 
 
 if __name__ == '__main__':
+    session = db.session
     retrieve_articles_from_all_feeds()

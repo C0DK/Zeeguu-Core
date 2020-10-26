@@ -1,16 +1,15 @@
 from datetime import datetime
 
-from sqlalchemy.orm.exc import NoResultFound
-
-import zeeguu_core
-from sqlalchemy import Column, UniqueConstraint, Integer, ForeignKey, DateTime, Boolean, or_
+from sqlalchemy import (Boolean, Column, DateTime, ForeignKey, Integer,
+                        UniqueConstraint, or_)
 from sqlalchemy.orm import relationship
-
+from sqlalchemy.orm.exc import NoResultFound
 from zeeguu_core.constants import JSON_TIME_FORMAT
 from zeeguu_core.model import Article, User
+from zeeguu_core.server import db
 
 
-class UserArticle(zeeguu_core.db.Model):
+class UserArticle(db.Model):
     """
 
         A user and an article.

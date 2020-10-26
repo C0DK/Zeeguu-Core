@@ -4,9 +4,7 @@ from sqlalchemy.orm import relationship
 
 from zeeguu_core.model import User
 
-import zeeguu_core
-
-db = zeeguu_core.db
+from zeeguu_core.server import db
 
 
 class UserLanguage(db.Model):

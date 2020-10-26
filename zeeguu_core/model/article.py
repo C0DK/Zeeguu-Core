@@ -4,7 +4,7 @@ import sqlalchemy
 from sqlalchemy.orm import relationship, backref
 from sqlalchemy.orm.exc import NoResultFound
 
-import zeeguu_core
+from zeeguu_core.server import db
 
 from sqlalchemy import Column, Integer, String, ForeignKey, DateTime, UnicodeText, Table
 
@@ -12,7 +12,6 @@ from zeeguu_core.constants import JSON_TIME_FORMAT
 from zeeguu_core.language.difficulty_estimator_factory import DifficultyEstimatorFactory
 from langdetect import detect
 
-db = zeeguu_core.db
 
 article_topic_map = Table('article_topic_map',
                           db.Model.metadata,
@@ -77,8 +76,10 @@ class Article(db.Model):
         self.language = language
         self.broken = broken
 
-        fk_estimator = DifficultyEstimatorFactory.get_difficulty_estimator("fk")
-        fk_difficulty = fk_estimator.estimate_difficulty(self.content, self.language, None)['grade']
+        fk_estimator = DifficultyEstimatorFactory.get_difficulty_estimator(
+            "fk")
+        fk_difficulty = fk_estimator.estimate_difficulty(
+            self.content, self.language, None)['grade']
 
         # easier to store integer in the DB
         # otherwise we have to use Decimal, and it's not supported on all dbs
@@ -143,7 +144,8 @@ class Article(db.Model):
             ))
 
         if self.published_time:
-            result_dict['published'] = self.published_time.strftime(JSON_TIME_FORMAT)
+            result_dict['published'] = self.published_time.strftime(
+                JSON_TIME_FORMAT)
 
         if self.rss_feed:
             result_dict['feed_id'] = self.rss_feed.id,
@@ -207,7 +209,8 @@ class Article(db.Model):
                 from random import randint
                 print("GOT: " + url)
                 sleep_time = randint(3, 33)
-                print(f"sleeping for {sleep_time}s... so we don't annoy our friendly servers")
+                print(
+                    f"sleeping for {sleep_time}s... so we don't annoy our friendly servers")
                 time.sleep(sleep_time)
 
             if not language:
@@ -223,7 +226,8 @@ class Article(db.Model):
                 url_object,
                 art.title,
                 ', '.join(art.authors),
-                art.text[0:32000],  # any article longer than this will be truncated...
+                # any article longer than this will be truncated...
+                art.text[0:32000],
                 art.summary,
                 None,
                 None,

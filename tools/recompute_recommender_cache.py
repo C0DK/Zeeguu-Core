@@ -13,7 +13,8 @@ from zeeguu_core.content_recommender.mixed_recommender import _reading_preferenc
     _recompute_recommender_cache_if_needed
 from zeeguu_core.model import User, ArticlesCache
 
-session = zeeguu_core.db.session
+from zeeguu_core.server import db
+session = db.session
 
 
 def hashes_of_existing_cached_preferences():

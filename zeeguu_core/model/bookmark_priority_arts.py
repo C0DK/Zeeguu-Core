@@ -1,8 +1,5 @@
-import zeeguu_core
-
 from zeeguu_core.model.bookmark import Bookmark
-
-db = zeeguu_core.db
+from zeeguu_core.server import db
 
 
 class BookmarkPriorityARTS(db.Model):

@@ -1,4 +1,4 @@
-import zeeguu_core
+from zeeguu_core import server
 from zeeguu_core.model import Article, Language
 
 JUNK_PATTERNS = [
@@ -41,6 +41,6 @@ def cleanup_all_articles_in_language(language_code):
         cleaned_content = cleanup_non_content_bits(each.content)
         if cleaned_content != each.content:
             each.content = cleaned_content
-            zeeguu_core.db.session.add(each)
+            server.db.session.add(each)
             print(each.title + "\n\n")
-    zeeguu_core.db.session.commit()
+    server.db.session.commit()

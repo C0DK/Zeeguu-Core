@@ -1,10 +1,6 @@
+from sqlalchemy import Column, ForeignKey, Integer, String
 from sqlalchemy.orm import relationship
-
-import zeeguu_core
-
-from sqlalchemy import Column, Integer, String, ForeignKey, and_
-
-db = zeeguu_core.db
+from zeeguu_core.server import db
 
 
 class LocalizedTopic(db.Model):

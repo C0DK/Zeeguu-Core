@@ -3,6 +3,8 @@ from sqlalchemy.exc import InvalidRequestError
 
 import zeeguu_core.model
 
+from zeeguu_core.server import db
+
 
 class BaseRule:
     """The base class for the Rule testing framework.
@@ -21,15 +23,13 @@ class BaseRule:
     """
     faker = Faker()
 
-    db = zeeguu_core.db
-
     @classmethod
     def save(cls, obj):
         try:
-            cls.db.session.add(obj)
-            cls.db.session.commit()
+            db.session.add(obj)
+            db.session.commit()
         except InvalidRequestError:
-            cls.db.session.rollback()
+            db.session.rollback()
             cls.save(obj)
 
     def _create_model_object(self, *args):

@@ -1,31 +1,21 @@
 import json
-
-from sqlalchemy.orm.exc import NoResultFound
-
-import zeeguu_core
-from sqlalchemy import Column, Integer, UnicodeText
-
-from zeeguu_core.model import User, UserWord, Language
 from sys import platform
 
-
-db = zeeguu_core.db
+from sqlalchemy import Integer, UnicodeText
+from sqlalchemy.orm.exc import NoResultFound
+from zeeguu_core.model import Language, User, UserWord
+from zeeguu_core.server import db
 
 MAX_EVENT_HISTORY_LENGTH = 50
 
-from zeeguu_core.constants import (
-                        WIH_CORRECT_EX_RECOGNIZE,
-                        WIH_CORRECT_EX_TRANSLATE,
-                        WIH_CORRECT_EX_CHOICE,
-                        WIH_CORRECT_EX_MATCH,
-                        WIH_WRONG_EX_RECOGNIZE,
-                        WIH_WRONG_EX_TRANSLATE,
-                        WIH_WRONG_EX_CHOICE,
-                        WIH_WRONG_EX_MATCH,
-                        WIH_READ_CLICKED,
-                        WIH_READ_NOT_CLICKED_IN_SENTENCE,
-                        TIMEDELTA
-)
+from zeeguu_core.constants import (TIMEDELTA, WIH_CORRECT_EX_CHOICE,
+                                   WIH_CORRECT_EX_MATCH,
+                                   WIH_CORRECT_EX_RECOGNIZE,
+                                   WIH_CORRECT_EX_TRANSLATE, WIH_READ_CLICKED,
+                                   WIH_READ_NOT_CLICKED_IN_SENTENCE,
+                                   WIH_WRONG_EX_CHOICE, WIH_WRONG_EX_MATCH,
+                                   WIH_WRONG_EX_RECOGNIZE,
+                                   WIH_WRONG_EX_TRANSLATE)
 
 
 class WordInteractionEvent(object):
@@ -65,7 +55,7 @@ class WordInteractionEvent(object):
                 return WIH_WRONG_EX_CHOICE
             elif exercise_source == 6:#Match three
                 return WIH_WRONG_EX_MATCH
-        
+
 
 class WordInteractionHistory(db.Model):
     __table_args__ = dict(mysql_collate='utf8_bin')

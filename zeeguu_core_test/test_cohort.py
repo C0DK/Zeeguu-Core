@@ -6,8 +6,9 @@ import zeeguu_core
 from zeeguu_core_test.rules.cohort_rule import CohortRule
 from zeeguu_core.model.teacher import Teacher
 from zeeguu_core.model.teacher_cohort_map import TeacherCohortMap
+from zeeguu_core.server import db
 
-session = zeeguu_core.db.session
+session = db.session
 
 
 class CohortTest(ModelTestMixIn, TestCase):

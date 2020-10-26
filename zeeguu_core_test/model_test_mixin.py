@@ -2,7 +2,7 @@
 # warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 import requests_mock
-import zeeguu_core.model
+from zeeguu_core import server
 
 from faker import Faker
 
@@ -12,7 +12,8 @@ from zeeguu_core_test.test_data.mocking_the_web import mock_requests_get
 
 
 class ModelTestMixIn(TestCase):
-    db = zeeguu_core.db
+    # TODO make this less declarative.
+    db = server.db
 
     def setUp(self):
         self.faker = Faker()

@@ -2,7 +2,6 @@ from datetime import datetime, time
 
 from sqlalchemy.orm.exc import NoResultFound
 
-import zeeguu_core
 from sqlalchemy import Column, UniqueConstraint, Integer, ForeignKey, String, DateTime, Boolean
 from sqlalchemy.orm import relationship
 
@@ -10,8 +9,9 @@ from zeeguu_core.constants import SIMPLE_TIME_FORMAT
 from zeeguu_core.model import Url, User
 from zeeguu_core.model.language import Language
 
+from zeeguu_core.server import db
 
-class StarredArticle(zeeguu_core.db.Model):
+class StarredArticle(db.Model):
     """
 
         This keeps track of information regarding a user's starred articles.

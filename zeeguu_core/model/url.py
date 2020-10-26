@@ -1,18 +1,11 @@
+import random
 import re
-from urllib.parse import urlparse
-from urllib.request import urlopen
+import time
 
 import sqlalchemy.orm
-from requests import Request
 from sqlalchemy import UniqueConstraint
-
-import zeeguu_core
-import time
-import random
-
-db = zeeguu_core.db
-
 from zeeguu_core.model.domain_name import DomainName
+from zeeguu_core.server import db
 
 
 class Url(db.Model):
@@ -25,7 +18,8 @@ class Url(db.Model):
     domain = db.relationship(DomainName)
 
     __table_args__ = (
-        UniqueConstraint('path', 'domain_name_id', name='_path_domain_unique_constraint'),
+        UniqueConstraint('path', 'domain_name_id',
+                         name='_path_domain_unique_constraint'),
         {'mysql_collate': 'utf8_bin'}
     )
 
@@ -104,12 +98,15 @@ class Url(db.Model):
                         session.rollback()
                         domain = DomainName.find_or_create(session, _url)
                         path = Url.get_path(_url)
-                        print(f"after rollback trying to find again: {domain.domain_name} + {path}")
-                        u = cls.query.filter(cls.path == path).filter(cls.domain == domain).first()
+                        print(
+                            f"after rollback trying to find again: {domain.domain_name} + {path}")
+                        u = cls.query.filter(cls.path == path).filter(
+                            cls.domain == domain).first()
                         print("Found url after recovering from race")
                         return u
                     except Exception as e:
-                        print("Exception of second degree in url..." + str(i) + str(e))
+                        print("Exception of second degree in url..." +
+                              str(i) + str(e))
                         time.sleep(random.randrange(1, 10) * 0.1)
                         continue
                     break

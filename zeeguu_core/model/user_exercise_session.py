@@ -1,10 +1,9 @@
 import sqlalchemy
-import zeeguu_core
 
 from datetime import datetime, timedelta
 from zeeguu_core.model.user import User
 
-db = zeeguu_core.db
+from zeeguu_core.server import db
 
 # Parameter that controls after how much time (in seconds) the session is expired
 EXERCISE_SESSION_TIMEOUT = 21

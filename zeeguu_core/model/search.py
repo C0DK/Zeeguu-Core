@@ -1,7 +1,5 @@
-import zeeguu_core
 from sqlalchemy import Column, Integer, String
-
-db = zeeguu_core.db
+from zeeguu_core.server import db
 
 
 class Search(db.Model):

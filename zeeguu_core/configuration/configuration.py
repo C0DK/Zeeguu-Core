@@ -3,6 +3,10 @@ import os
 import sys
 
 
+class CouldNotLoadConfigsError(Exception):
+    pass
+
+
 def load_configuration_or_abort(app, environ_variable, mandatory_config_keys=[]):
     """
 
@@ -21,22 +25,24 @@ def load_configuration_or_abort(app, environ_variable, mandatory_config_keys=[])
         print("ZEEGUU: Loaded testing configuration.")
     else:
         try:
-            config_file = _load_config_file(environ_variable, mandatory_config_keys)
+            config_file = _load_config_file(
+                environ_variable, mandatory_config_keys)
             app.config.from_pyfile(config_file, silent=False)
             _assert_configs(app.config, mandatory_config_keys, config_file)
-            print(("ZEEGUU: Loaded {0} config from {1}".format(app.name, config_file)))
+            print(("ZEEGUU: Loaded {0} config from {1}".format(
+                app.name, config_file)))
+        # TODO don't catch base class exception
         except Exception as e:
-            print(str(e))
-            sys.exit(-1)
+            raise CouldNotLoadConfigsError(e)
 
 
 def _assert_configs(config, required_keys, config_file_name=None):
     for key in required_keys:
-        config_value = config.get(key, None)
-        if config_value is None:
-            print("Please define the {key} key in the {config} file!".format(key=key,
-                                                                             config=config_file_name or 'config'))
-            sys.exit(-1)
+        if key not in config or config[key] is None:
+            raise CouldNotLoadConfigsError(
+                "Please define the {key} key in the {config} file!".format(key=key,
+                                                                           config=config_file_name or 'config')
+            )
 
 
 def _called_from_within_a_test():
@@ -58,7 +64,7 @@ def _load_api_testing_configuration(app):
 def _load_config_file(environ_variable, mandatory_config_keys):
     try:
         return os.environ[environ_variable]
-    except Exception as e:
-        print(f"You must define an envvar named {environ_variable} which points to a config file which")
-        print(f'defines at least the following constants: {mandatory_config_keys}')
-        sys.exit(0)
+    except KeyError:
+        raise CouldNotLoadConfigsError(
+            f"You must define an envvar named {environ_variable} which points to a config file which"
+            f'defines at least the following constants: {mandatory_config_keys}')

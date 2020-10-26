@@ -27,3 +27,7 @@ def critical(msg):
 def logp(msg):
     log(msg)
     print(msg)
+
+logp(f"zeeguu_core initialized logger with name: {logger.name}")
+logging.basicConfig(
+        format="%(asctime)s %(levelname)s %(name)s %(message)s")

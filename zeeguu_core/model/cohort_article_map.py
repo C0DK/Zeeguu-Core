@@ -1,11 +1,11 @@
-import zeeguu_core
-from sqlalchemy import Column, Integer, ForeignKey, PrimaryKeyConstraint
+from sqlalchemy import Column, ForeignKey, Integer, PrimaryKeyConstraint
 from sqlalchemy.orm import relationship
-from zeeguu_core.model.cohort import Cohort
 from zeeguu_core.model.article import Article
+from zeeguu_core.model.cohort import Cohort
+from zeeguu_core.server import db
 
 
-class CohortArticleMap(zeeguu_core.db.Model):
+class CohortArticleMap(db.Model):
 
     cohort_id = Column(Integer, ForeignKey(Cohort.id))
     cohort = relationship(Cohort)

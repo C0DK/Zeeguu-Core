@@ -3,8 +3,7 @@ from sqlalchemy.orm import relationship
 from zeeguu_core.model.user import User
 import sqlalchemy
 
-import zeeguu_core
-db = zeeguu_core.db
+from zeeguu_core.server import db
 
 
 class SearchSubscription(db.Model):

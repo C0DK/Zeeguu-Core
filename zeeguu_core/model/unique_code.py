@@ -1,10 +1,9 @@
 from datetime import datetime
 from random import randint
 
-import zeeguu_core
 from sqlalchemy import func
 
-db = zeeguu_core.db
+from zeeguu_core.server import db
 
 
 class UniqueCode(db.Model):

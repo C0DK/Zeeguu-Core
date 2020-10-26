@@ -5,8 +5,7 @@ from zeeguu_core.model.topic import Topic
 from zeeguu_core.model.user import User
 import sqlalchemy
 
-import zeeguu_core
-db = zeeguu_core.db
+from zeeguu_core.server import db
 
 
 class TopicSubscription(db.Model):

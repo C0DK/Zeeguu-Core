@@ -1,13 +1,9 @@
-import sqlalchemy
-import zeeguu_core
-
 from datetime import datetime, timedelta
 
-from zeeguu_core.model import User, Article
-
+import sqlalchemy
 from zeeguu_core.constants import *
-
-db = zeeguu_core.db
+from zeeguu_core.model import Article, User
+from zeeguu_core.server import db
 
 # Parameter that controls after how much time (in minutes) the session is expired
 READING_SESSION_TIMEOUT = 2

@@ -3,11 +3,12 @@ import sqlalchemy
 import zeeguu_core
 from zeeguu_core.emailer.user_activity import send_new_user_account_email
 from zeeguu_core.model import Cohort, User, Teacher
+from zeeguu_core.server import app
 
 
 def valid_invite_code(invite_code):
-    if (zeeguu_core.app.config.get("INVITATION_CODES") and
-            invite_code in zeeguu_core.app.config.get("INVITATION_CODES")):
+    if (app.config.get("INVITATION_CODES") and
+            invite_code in app.config.get("INVITATION_CODES")):
         return True
 
     if Cohort.exists_with_invite_code(invite_code):

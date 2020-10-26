@@ -1,7 +1,7 @@
 import random
 from datetime import datetime
 
-import zeeguu_core
+from zeeguu_core.server import db
 from zeeguu_core_test.model_test_mixin import ModelTestMixIn
 from zeeguu_core_test.rules.exercise_rule import ExerciseRule
 from zeeguu_core_test.rules.outcome_rule import OutcomeRule
@@ -27,7 +27,7 @@ class WordsToStudyTest(ModelTestMixIn):
         new_bookmark = self.user_rule.add_bookmarks(1)[0].bookmark
 
         # WHEN
-        arts.update_bookmark_priority(zeeguu_core.db, self.user)
+        arts.update_bookmark_priority(db, self.user)
 
         # THEN
         bookmark = self.__get_bookmark_with_highest_priority()
@@ -41,7 +41,7 @@ class WordsToStudyTest(ModelTestMixIn):
     def test_just_finished_bookmark_has_not_the_highest_priority(self):
         # GIVEN
         ABTesting._algorithms = [ABTesting._algorithms[random.randint(0, len(ABTesting._algorithms) - 1)]]
-        arts.update_bookmark_priority(zeeguu_core.db, self.user)
+        arts.update_bookmark_priority(db, self.user)
         first_bookmark_to_study = self.__get_bookmark_with_highest_priority()
 
         # WHEN
@@ -52,7 +52,7 @@ class WordsToStudyTest(ModelTestMixIn):
         exercise_rule.exercise.outcome = OutcomeRule().correct
         first_bookmark_to_study.add_new_exercise(exercise_rule.exercise)
 
-        arts.update_bookmark_priority(zeeguu_core.db, self.user)
+        arts.update_bookmark_priority(db, self.user)
 
         # THEN
         bookmark = self.__get_bookmark_with_highest_priority()

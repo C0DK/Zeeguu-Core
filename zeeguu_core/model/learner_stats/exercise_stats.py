@@ -1,9 +1,8 @@
 import sqlalchemy
 
-import zeeguu_core
 from zeeguu_core.model.exercise_source import ExerciseSource
 
-db = zeeguu_core.db
+from zeeguu_core.server import db
 
 
 class ExerciseStats(db.Model):

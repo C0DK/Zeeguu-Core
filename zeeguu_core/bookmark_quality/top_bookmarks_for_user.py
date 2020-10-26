@@ -1,4 +1,4 @@
-import zeeguu_core
+from zeeguu_core.server import db
 from wordstats import Word
 from zeeguu_core.bookmark_quality import quality_top_bookmark
 
@@ -9,7 +9,7 @@ def top_bookmarks(self, count=50):
     def rank(b):
         return Word.stats(b.origin.word, b.origin.language.code).rank
 
-    query = zeeguu_core.db.session.query(Bookmark)
+    query = db.session.query(Bookmark)
     all_bookmarks = (query.
                      join(UserWord, Bookmark.origin_id == UserWord.id).
                      filter(UserWord.language_id == self.learned_language_id).

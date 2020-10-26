@@ -23,7 +23,7 @@ from zeeguu_core.model.user import User
 from zeeguu_core.model.user_word import UserWord
 from zeeguu_core.bookmark_quality.fit_for_study import fit_for_study
 
-db = zeeguu_core.db
+from zeeguu_core.server import db
 
 CORRECTS_IN_A_ROW_FOR_LEARNED = 4
 

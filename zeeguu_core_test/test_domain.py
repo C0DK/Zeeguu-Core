@@ -1,16 +1,13 @@
 import random
 from unittest import TestCase
 
-from sqlalchemy.orm.exc import NoResultFound, MultipleResultsFound
-
-import zeeguu_core
-from zeeguu_core_test.model_test_mixin import ModelTestMixIn
-from zeeguu_core_test.rules.url_rule import UrlRule
-from zeeguu_core_test.rules.user_rule import UserRule
+from sqlalchemy.orm.exc import MultipleResultsFound, NoResultFound
 from zeeguu_core.model.domain_name import DomainName
 from zeeguu_core.model.url import Url
 
-db = zeeguu_core.db
+from zeeguu_core_test.model_test_mixin import ModelTestMixIn
+from zeeguu_core_test.rules.url_rule import UrlRule
+from zeeguu_core_test.rules.user_rule import UserRule
 
 
 class DomainTest(ModelTestMixIn, TestCase):

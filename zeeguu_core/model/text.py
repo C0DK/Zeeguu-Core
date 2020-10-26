@@ -2,7 +2,6 @@ import re
 
 import sqlalchemy.orm
 import time
-import zeeguu_core
 from zeeguu_core.model import Article
 
 from zeeguu_core.util import text_hash
@@ -10,7 +9,7 @@ from zeeguu_core.model.language import Language
 from zeeguu_core.model.url import Url
 from zeeguu_core.model.user_word import UserWord
 
-db = zeeguu_core.db
+from zeeguu_core.server import db
 
 
 class Text(db.Model):

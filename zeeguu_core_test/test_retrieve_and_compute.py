@@ -1,15 +1,16 @@
 import newspaper
+from zeeguu_core.content_retriever.article_downloader import (
+    download_from_feed, strip_article_title_word)
+from zeeguu_core.content_retriever.content_cleaner import \
+    cleanup_non_content_bits
+from zeeguu_core.content_retriever.quality_filter import sufficient_quality
+from zeeguu_core.model import ArticleWord, LocalizedTopic, Topic
+from zeeguu_core.server import db
 
-import zeeguu_core
 from zeeguu_core_test.model_test_mixin import ModelTestMixIn
 from zeeguu_core_test.rules.language_rule import LanguageRule
 from zeeguu_core_test.rules.rss_feed_rule import RSSFeedRule
 from zeeguu_core_test.rules.user_rule import UserRule
-from zeeguu_core.content_retriever.content_cleaner import cleanup_non_content_bits
-from zeeguu_core.content_retriever.article_downloader import download_from_feed, strip_article_title_word
-from zeeguu_core.content_retriever.quality_filter import sufficient_quality
-from zeeguu_core.model import Topic, LocalizedTopic, ArticleWord
-
 from zeeguu_core_test.test_data.mocking_the_web import *
 
 
@@ -22,7 +23,7 @@ class TestRetrieveAndCompute(ModelTestMixIn):
 
     def testDifficultyOfFeedItems(self):
         feed = RSSFeedRule().feed1
-        download_from_feed(feed, zeeguu_core.db.session, 3, False)
+        download_from_feed(feed, db.session, 3, False)
 
         articles = feed.get_articles(limit=2)
 
@@ -32,13 +33,13 @@ class TestRetrieveAndCompute(ModelTestMixIn):
     def testDownloadWithTopic(self):
         feed = RSSFeedRule().feed1
         topic = Topic("Spiegel")
-        zeeguu_core.db.session.add(topic)
-        zeeguu_core.db.session.commit()
+        db.session.add(topic)
+        db.session.commit()
         loc_topic = LocalizedTopic(topic, self.lan, "spiegelDE", "spiegel")
-        zeeguu_core.db.session.add(loc_topic)
-        zeeguu_core.db.session.commit()
+        db.session.add(loc_topic)
+        db.session.commit()
 
-        download_from_feed(feed, zeeguu_core.db.session, 3, False )
+        download_from_feed(feed, db.session, 3, False)
 
         article = feed.get_articles(limit=2)[0]
 
@@ -47,7 +48,7 @@ class TestRetrieveAndCompute(ModelTestMixIn):
     def testDownloadWithWords(self):
         feed = RSSFeedRule().feed1
 
-        download_from_feed(feed, zeeguu_core.db.session, 3, False)
+        download_from_feed(feed, db.session, 3, False)
 
         article = feed.get_articles(limit=2)[0]
 

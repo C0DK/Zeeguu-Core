@@ -1,10 +1,9 @@
 import sqlalchemy.orm
 
-import zeeguu_core
 from zeeguu_core.model.ranked_word import WordForm
 from zeeguu_core.model.user import User
 
-db = zeeguu_core.db
+from zeeguu_core.server import db
 
 
 class EncounterStats(db.Model):

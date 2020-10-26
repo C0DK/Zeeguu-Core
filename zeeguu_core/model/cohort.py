@@ -1,12 +1,12 @@
-import zeeguu_core
 from sqlalchemy import Column, Integer, Boolean
 from sqlalchemy.orm import relationship
 from zeeguu_core.model.language import Language
 
-db = zeeguu_core.db
+from zeeguu_core.server import db
+from zeeguu_core import logs
 
 
-class Cohort(zeeguu_core.db.Model):
+class Cohort(db.Model):
     __table_args__ = {'mysql_collate': 'utf8_bin'}
 
     id = db.Column(db.Integer, primary_key=True)
@@ -55,10 +55,10 @@ class Cohort(zeeguu_core.db.Model):
         # compatibility reasons: if there is an associated invitation code
         # use it; otherwise fallback on the cohort that's associated with the User
         if self.inv_code and len(self.inv_code) > 1:
-            zeeguu_core.log("we have an invitation code...")
+            logs.log("we have an invitation code...")
             return User.query.filter_by(invitation_code=self.inv_code).all()
 
-        zeeguu_core.log("falling back on filtering based on cohort")
+        logs.log("falling back on filtering based on cohort")
         return User.query.filter(User.cohort == self).all()
 
     def get_teachers(self):

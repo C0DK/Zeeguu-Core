@@ -1,9 +1,8 @@
 from sqlalchemy.orm.exc import NoResultFound
 from datetime import datetime
+from zeeguu_core.server import db
 
 from zeeguu_core import logs
-
-db = zeeguu_core.db
 
 
 class Language(db.Model):

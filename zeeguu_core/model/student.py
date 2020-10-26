@@ -1,9 +1,6 @@
 from datetime import datetime, timedelta
 from zeeguu_core.model import UserReadingSession, UserExerciseSession
 from zeeguu_core.model import User
-import zeeguu_core
-
-db = zeeguu_core.db
 
 
 class Student(object):

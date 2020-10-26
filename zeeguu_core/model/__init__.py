@@ -1,29 +1,3 @@
-import re
-import flask_sqlalchemy
-
-import zeeguu_core
-from flask import Flask
-
-from zeeguu_core.configuration.configuration import load_configuration_or_abort
-
-# If zeeguu_core.app is already defined we use that object
-# as the app for the db_init that we do later. If not,
-# we create the app here and load the corresponding configuration
-
-# TODO remove sideefect.. find all usages of zeeguu_core
-if not hasattr(zeeguu_core, "app"):
-    zeeguu_core.app = Flask("Zeeguu-Core")
-    load_configuration_or_abort(zeeguu_core.app, 'ZEEGUU_CORE_CONFIG',
-                                ['MAX_SESSION',
-                                 'SQLALCHEMY_DATABASE_URI',
-                                 'SQLALCHEMY_TRACK_MODIFICATIONS'])
-
-# Create the zeeguu_core.db object, which will be the superclass
-# of all the model classes
-zeeguu_core.db = flask_sqlalchemy.SQLAlchemy(zeeguu_core.app)
-# Note, that if we pass the app here, then we don't need later
-# to push the app context
-
 # the core model
 from .language import Language
 from .url import Url
@@ -79,13 +53,6 @@ from .user_exercise_session import UserExerciseSession
 # bookmark scheduling
 from zeeguu_core.model.bookmark_priority_arts import BookmarkPriorityARTS
 
-# Creating the DB tables if needed
-#
-# Note that this must be called after all the model classes are loaded
-zeeguu_core.db.init_app(zeeguu_core.app)
-zeeguu_core.db.create_all(app=zeeguu_core.app)
 
-# Log the DB connection string; after masking the password
-db_connection_string = zeeguu_core.app.config["SQLALCHEMY_DATABASE_URI"]
-anon_conn_string = re.sub(":([a-zA-Z_][a-zA-Z_0-9]*)@", ":****@", db_connection_string)
-zeeguu_core.warning('*** ==== ZEEGUU CORE: Linked model with: ' + anon_conn_string)
+
+# TODO create a `__all__` dictionary

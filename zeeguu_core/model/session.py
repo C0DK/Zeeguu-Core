@@ -1,15 +1,10 @@
 import datetime
 import random
 
-import flask
-from sqlalchemy.orm.exc import NoResultFound
-
-import zeeguu_core
 from sqlalchemy import desc
-
+from sqlalchemy.orm.exc import NoResultFound
 from zeeguu_core.model.user import User
-
-db = zeeguu_core.db
+from zeeguu_core.server import db, app
 
 
 class Session(db.Model):
@@ -33,7 +28,7 @@ class Session(db.Model):
     @classmethod
     def for_user(cls, user):
         while True:
-            id_ = random.randint(0, zeeguu_core.app.config.get("MAX_SESSION"))
+            id_ = random.randint(0, app.config.get("MAX_SESSION"))
             if cls.query.get(id_) is None:
                 break
         return cls(user, id_)
@@ -79,7 +74,7 @@ class Session(db.Model):
     @classmethod
     def find_for_user(cls, user):
         s = cls.query.filter(cls.user == user). \
-            filter(cls.id < zeeguu_core.app.config.get("MAX_SESSION")). \
+            filter(cls.id < app.config.get("MAX_SESSION")). \
             order_by(desc(cls.last_use)).first()
         if not s:
             s = cls.for_user(user)

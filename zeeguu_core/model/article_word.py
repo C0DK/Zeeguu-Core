@@ -1,14 +1,8 @@
-from sqlalchemy.orm import relationship, backref
+from sqlalchemy import Column, ForeignKey, Integer, String, Table
+from sqlalchemy.exc import DatabaseError, IntegrityError, InterfaceError
+from sqlalchemy.orm import backref, relationship
 from sqlalchemy.orm.exc import NoResultFound
-from sqlalchemy.exc import InterfaceError, IntegrityError, DatabaseError
-
-
-
-import zeeguu_core
-
-from sqlalchemy import Column, Integer, String, ForeignKey, Table
-
-db = zeeguu_core.db
+from zeeguu_core.server import db
 
 article_word_map = Table('article_word_map',
                          db.Model.metadata,

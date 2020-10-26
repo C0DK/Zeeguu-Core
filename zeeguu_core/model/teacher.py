@@ -1,13 +1,11 @@
-from zeeguu_core.model.teacher_cohort_map import TeacherCohortMap
-from sqlalchemy import Column, Integer, ForeignKey
+from sqlalchemy import Column, ForeignKey, Integer
 from sqlalchemy.orm import relationship
 from zeeguu_core.model import User
-import zeeguu_core
+from zeeguu_core.model.teacher_cohort_map import TeacherCohortMap
+from zeeguu_core.server import db
 
-db = zeeguu_core.db
 
-
-class Teacher(zeeguu_core.db.Model):
+class Teacher(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = Column(Integer, ForeignKey(User.id))
     user = relationship(User)
