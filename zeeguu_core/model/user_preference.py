@@ -4,6 +4,7 @@ from sqlalchemy.orm.exc import NoResultFound
 from datetime import time
 
 from zeeguu_core.model import User
+from zeeguu_core.logs import info
 
 from zeeguu_core.server import db
 
@@ -112,14 +113,14 @@ class UserPreference(db.Model):
                 new_pref = cls(user, key, value)
                 session.add(new_pref)
                 session.commit()
-                zeeguu_core.log("Created new preference since original was missing")
+                log("Created new preference since original was missing")
                 return new_pref
             except:
                 for _ in range(10):
                     try:
                         session.rollback()
                         pref = cls._find(user, key)
-                        zeeguu_core.log("Successfully avoided race condition. Nice! ")
+                        info("Successfully avoided race condition. Nice!")
                         return pref
                     except sqlalchemy.orm.exc.NoResultFound:
                         time.sleep(0.3)

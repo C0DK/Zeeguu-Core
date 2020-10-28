@@ -575,7 +575,7 @@ class User(db.Model):
             if user.password == util.password_hash(password, bytes.fromhex(user.password_salt)):
                 return user
         except sqlalchemy.orm.exc.NoResultFound:
-            zeeguu_core.warning(f"Login attempt with wrong email: {email}")
+            logs.warning(f"Login attempt with wrong email: {email}")
             return None
 
     @classmethod

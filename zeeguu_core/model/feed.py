@@ -3,6 +3,7 @@ from datetime import datetime
 
 import feedparser
 import requests
+from zeeguu_core.logs import log
 import sqlalchemy.orm.exc
 from sqlalchemy.orm.exc import NoResultFound
 from zeeguu_core.constants import SIMPLE_TIME_FORMAT
@@ -115,7 +116,7 @@ class RSSFeed(db.Model):
                 # curious if this fixes the problem in some
                 # cases; to find out, we log
 
-                zeeguu_core.log(f'trying updated_parsed where published_parsed failed for {item.get("link", "")} in the context of {self.url.as_string()}')
+                log(f'trying updated_parsed where published_parsed failed for {item.get("link", "")} in the context of {self.url.as_string()}')
                 result = item.updated_parsed
                 return result
 
@@ -125,7 +126,7 @@ class RSSFeed(db.Model):
         skipped_due_to_time = 0
         feed_items = []
         skipped_items = []
-        zeeguu_core.log(f"** Articles in feed: {len(feed_data.entries)}")
+        log(f"** Articles in feed: {len(feed_data.entries)}")
         for item in feed_data.entries:
             try:
                 published_string = time.strftime(SIMPLE_TIME_FORMAT, publishing_date(item))
@@ -149,7 +150,7 @@ class RSSFeed(db.Model):
                     skipped_items.append(new_item_data_dict)
 
             except AttributeError as e:
-                zeeguu_core.log(f'Exception {e} while trying to retrieve {item.get("link", "")}')
+                log(f'Exception {e} while trying to retrieve {item.get("link", "")}')
 
 
         sorted_skipped_items = sorted(skipped_items, key= lambda x:x['published_datetime'])
@@ -159,8 +160,8 @@ class RSSFeed(db.Model):
         for each in feed_items:
             zeeguu_core.debug(f"- to download: {each['published_datetime']} - {each['title']}")
 
-        zeeguu_core.log(f'*** Skipped due to time: {len(skipped_items)} ')
-        zeeguu_core.log(f"*** To download: {len(feed_items)}")
+        log(f'*** Skipped due to time: {len(skipped_items)} ')
+        log(f"*** To download: {len(feed_items)}")
 
         return feed_items
 

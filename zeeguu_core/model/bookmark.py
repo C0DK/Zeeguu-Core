@@ -11,7 +11,6 @@ from zeeguu_core.model import Article
 
 from wordstats import Word
 
-import zeeguu_core
 from zeeguu_core.model.SortedExerciseLog import SortedExerciseLog
 from zeeguu_core.model.exercise import Exercise
 from zeeguu_core.model.exercise_outcome import ExerciseOutcome
@@ -24,6 +23,7 @@ from zeeguu_core.model.user_word import UserWord
 from zeeguu_core.bookmark_quality.fit_for_study import fit_for_study
 
 from zeeguu_core.server import db
+from zeeguu_core.logs import log
 
 CORRECTS_IN_A_ROW_FOR_LEARNED = 4
 
@@ -172,7 +172,7 @@ class Bookmark(db.Model):
             translation_word = self.translation.word
         except AttributeError as e:
             translation_word = ''
-            zeeguu_core.log(f"Exception caught: for some reason there was no translation for {self.id}")
+            log(f"Exception caught: for some reason there was no translation for {self.id}")
             print(str(e))
 
         word_info = Word.stats(self.origin.word,
@@ -320,9 +320,9 @@ class Bookmark(db.Model):
         log = SortedExerciseLog(self)
         is_learned = is_learned_based_on_exercise_outcomes(log)
         if is_learned:
-            zeeguu_core.log(f"Log: {log.summary()}: bookmark {self.id} learned!")
+            log(f"Log: {log.summary()}: bookmark {self.id} learned!")
             self.learned_time = log.last_exercise_time()
             self.learned = True
             session.add(self)
         else:
-            zeeguu_core.log(f"Log: {log.summary()}: bookmark {self.id} not learned yet.")
+            log(f"Log: {log.summary()}: bookmark {self.id} not learned yet.")

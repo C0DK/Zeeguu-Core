@@ -7,7 +7,7 @@
 """
 
 from sqlalchemy import not_, or_
-from zeeguu_core.logs import info, logger
+from zeeguu_core.logs import info
 from zeeguu_core.model import (
     Article,
     UserArticle,
@@ -102,15 +102,15 @@ def _recompute_recommender_cache_if_needed(user, session):
     """
 
     reading_pref_hash = _reading_preferences_hash(user)
-    logger.info(f"Pref hash: {reading_pref_hash}")
+    info(f"Pref hash: {reading_pref_hash}")
 
     articles_hash_obj = ArticlesCache.check_if_hash_exists(reading_pref_hash)
 
     if articles_hash_obj is False:
-        logger.info("Recomputing recommender cache...")
+        info("Recomputing recommender cache...")
         _recompute_recommender_cache(reading_pref_hash, session, user)
 
-    logger.info("No need to recomputed recommender cache.")
+    info("No need to recomputed recommender cache.")
 
 
 def _recompute_recommender_cache(reading_preferences_hash_code, session, user, article_limit=42):

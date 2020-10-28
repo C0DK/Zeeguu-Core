@@ -159,7 +159,7 @@ if __name__ == "__main__":
 
         logs.logp(
             f'wrong -> correct: {len(wrong_first_time_but_correct_at_end)}')
-        logs.logs.logp(f'wrong -> wrong: {wrong_all_the_way}')
+        logs.logp(f'wrong -> wrong: {wrong_all_the_way}')
 
         logs.logp(f'... -> correct: {correct_last_time}')
 

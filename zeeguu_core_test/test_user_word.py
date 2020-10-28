@@ -1,16 +1,15 @@
 import random
 
 from wordstats.loading_from_hermit import load_language_from_hermit
+from zeeguu_core.model import UserWord
+from zeeguu_core.server import db
 
 from zeeguu_core_test.model_test_mixin import ModelTestMixIn
 from zeeguu_core_test.rules.language_rule import LanguageRule
 from zeeguu_core_test.rules.user_word_rule import UserWordRule
-from zeeguu_core.model import UserWord
 
 
 class UserWordTest(ModelTestMixIn):
-    def setUp(self):
-        super().setUp()
 
     def test_importance_level(self):
         random_word_stats = self.__get_random_word_stats()
@@ -28,7 +27,7 @@ class UserWordTest(ModelTestMixIn):
         random_word = self.faker.word()
         random_language = LanguageRule().random
         user_word_not_in_db = UserWord(random_word, random_language)
-        user_word_created = UserWord.find_or_create(self.db.session, random_word, random_language)
+        user_word_created = UserWord.find_or_create(db.session, random_word, random_language)
 
         assert user_word_created == user_word_not_in_db
 

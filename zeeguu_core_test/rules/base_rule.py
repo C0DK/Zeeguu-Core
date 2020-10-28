@@ -1,8 +1,6 @@
 from faker import Faker
 from sqlalchemy.exc import InvalidRequestError
 
-import zeeguu_core.model
-
 from zeeguu_core.server import db
 
 

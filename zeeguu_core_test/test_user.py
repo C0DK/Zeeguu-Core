@@ -8,6 +8,7 @@ from zeeguu_core_test.model_test_mixin import ModelTestMixIn
 from zeeguu_core_test.rules.bookmark_rule import BookmarkRule
 from zeeguu_core_test.rules.user_rule import UserRule
 from zeeguu_core.model import User
+from zeeguu_core.server import db
 
 
 class UserTest(ModelTestMixIn):
@@ -121,8 +122,8 @@ class UserTest(ModelTestMixIn):
         random_uuid = str(uuid.uuid4())
         new_password = self.faker.password()
         anonymous_user = User.create_anonymous(random_uuid, new_password)
-        self.db.session.add(anonymous_user)
-        self.db.session.commit()
+        db.session.add(anonymous_user)
+        db.session.commit()
 
         result = User.authorize_anonymous(random_uuid, new_password)
 

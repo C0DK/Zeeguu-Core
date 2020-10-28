@@ -2,7 +2,7 @@
 # warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 import requests_mock
-from zeeguu_core import server
+from zeeguu_core.server import db
 
 from faker import Faker
 
@@ -12,12 +12,9 @@ from zeeguu_core_test.test_data.mocking_the_web import mock_requests_get
 
 
 class ModelTestMixIn(TestCase):
-    # TODO make this less declarative.
-    db = server.db
-
     def setUp(self):
         self.faker = Faker()
-        self.db.create_all()
+        db.create_all()
 
     def tearDown(self):
         super(ModelTestMixIn, self).tearDown()
@@ -26,9 +23,9 @@ class ModelTestMixIn(TestCase):
         # sometimes the tearDown freezes on drop_all
         # and it seems that it's because there's still
         # a session open somewhere. Better call first:
-        self.db.session.close()
+        db.session.close()
 
-        self.db.drop_all()
+        db.drop_all()
 
     def run(self, result=None):
 

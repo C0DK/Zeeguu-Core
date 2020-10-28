@@ -1,19 +1,21 @@
 import random
 
-from zeeguu_core.bookmark_quality import top_bookmarks, bad_quality_bookmark
-from zeeguu_core.definition_of_learned import is_learned_based_on_exercise_outcomes, \
-    CORRECTS_IN_DISTINCT_DAYS_FOR_LEARNED
-from zeeguu_core.model.SortedExerciseLog import SortedExerciseLog
+from zeeguu_core.bookmark_quality import bad_quality_bookmark, top_bookmarks
+from zeeguu_core.definition_of_learned import (
+    CORRECTS_IN_DISTINCT_DAYS_FOR_LEARNED,
+    is_learned_based_on_exercise_outcomes)
+from zeeguu_core.model import Bookmark
 from zeeguu_core.model.bookmark import CORRECTS_IN_A_ROW_FOR_LEARNED
-from zeeguu_core_test.model_test_mixin import ModelTestMixIn
+from zeeguu_core.model.SortedExerciseLog import SortedExerciseLog
+from zeeguu_core.server import db
 
+from zeeguu_core_test.model_test_mixin import ModelTestMixIn
 from zeeguu_core_test.rules.bookmark_rule import BookmarkRule
 from zeeguu_core_test.rules.exercise_rule import ExerciseRule
 from zeeguu_core_test.rules.outcome_rule import OutcomeRule
 from zeeguu_core_test.rules.source_rule import SourceRule
 from zeeguu_core_test.rules.text_rule import TextRule
 from zeeguu_core_test.rules.user_rule import UserRule
-from zeeguu_core.model import Bookmark
 
 
 class BookmarkTest(ModelTestMixIn):
@@ -194,7 +196,7 @@ class BookmarkTest(ModelTestMixIn):
             exercises += 1
             distinct_dates.add(correct_exercise.time.date())
 
-        correct_bookmark.update_learned_status(self.db.session)
+        correct_bookmark.update_learned_status(db.session)
 
         log = SortedExerciseLog(correct_bookmark)
         learned = is_learned_based_on_exercise_outcomes(log)

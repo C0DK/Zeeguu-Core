@@ -1,17 +1,12 @@
 from unittest import TestCase
 
+from zeeguu_core.model import LocalizedTopic, Topic, Url
 from zeeguu_core.server import db
-from sqlalchemy.orm.exc import NoResultFound
 
-from zeeguu_core.model import Topic, LocalizedTopic, Article, Url
 from zeeguu_core_test.model_test_mixin import ModelTestMixIn
 from zeeguu_core_test.rules.article_rule import ArticleRule
-from zeeguu_core_test.rules.language_rule import LanguageRule
-from zeeguu_core_test.rules.url_rule import UrlRule
 from zeeguu_core_test.rules.user_rule import UserRule
-from zeeguu_core.model.language import Language
 
-session = db.session
 
 
 class LocalizedTopicTest(ModelTestMixIn, TestCase):
@@ -38,7 +33,7 @@ class LocalizedTopicTest(ModelTestMixIn, TestCase):
         localized_topic.keywords = keyword
 
         article = ArticleRule().article
-        url = Url.find_or_create(self.db.session, url)
+        url = Url.find_or_create(db.session, url)
         article.url = url
 
         assert localized_topic.matches_article(article)

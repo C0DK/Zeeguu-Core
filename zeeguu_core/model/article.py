@@ -5,6 +5,7 @@ from sqlalchemy.orm import relationship, backref
 from sqlalchemy.orm.exc import NoResultFound
 
 from zeeguu_core.server import db
+from zeeguu_core.logs import log
 
 from sqlalchemy import Column, Integer, String, ForeignKey, DateTime, UnicodeText, Table
 
@@ -216,7 +217,7 @@ class Article(db.Model):
             if not language:
                 if art.meta_lang == '':
                     art.meta_lang = detect(art.text)
-                    zeeguu_core.log(f"langdetect: {art.meta_lang} for {url}")
+                    log(f"langdetect: {art.meta_lang} for {url}")
                 language = Language.find_or_create(art.meta_lang)
 
             # Create new article and save it to DB

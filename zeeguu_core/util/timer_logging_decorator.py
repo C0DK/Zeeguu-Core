@@ -1,6 +1,6 @@
 import time
 
-import zeeguu_core
+from zeeguu_core.logs import info
 
 
 def time_this(func):
@@ -10,7 +10,7 @@ def time_this(func):
         fname = func.__name__
 
         elapsed_time = (time.time() - start) * 1000
-        zeeguu_core.info(fname + ' ran for ' + "{0:.2f}".format(elapsed_time) + 'ms')
+        info(fname + ' ran for ' + "{0:.2f}".format(elapsed_time) + 'ms')
         return result
 
     return wrapper

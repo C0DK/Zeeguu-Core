@@ -1,9 +1,9 @@
-import logging
 import re
 import time
 
 import sqlalchemy
 from zeeguu_core.server import db
+from zeeguu_core.logs import info
 
 
 class DomainName(db.Model):
@@ -64,10 +64,10 @@ class DomainName(db.Model):
                     try:
                         session.rollback()
                         d = cls.find(_domain)
-                        logging.info ("found domain after recovering from race")
+                        info("found domain after recovering from race")
                         return d
                     except:
-                        logging.info ("exception of second degree in domain..." + str(i))
+                        info("exception of second degree in domain..." + str(i))
                         time.sleep(0.1)
                         continue
                     break

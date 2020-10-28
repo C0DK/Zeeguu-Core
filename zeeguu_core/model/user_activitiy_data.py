@@ -9,6 +9,7 @@ from zeeguu_core.model import Article, Url, User
 from zeeguu_core.model.user_reading_session import (
     ALL_ARTICLE_INTERACTION_ACTIONS, UserReadingSession)
 from zeeguu_core.server import db
+from zeeguu_core.logs import log
 
 
 class UserActivityData(db.Model):
@@ -234,8 +235,7 @@ class UserActivityData(db.Model):
             article_id = int(data['article_id'])
             has_article_id = True
 
-        zeeguu_core.log(
-            f'{event} value[:42]: {value[:42]} extra_data[:42]: {extra_data[:42]} art_id: {article_id}')
+        log(f'{event} value[:42]: {value[:42]} extra_data[:42]: {extra_data[:42]} art_id: {article_id}')
 
         new_entry = UserActivityData(user,
                                      time,

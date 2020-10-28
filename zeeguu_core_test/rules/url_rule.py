@@ -1,6 +1,7 @@
 
 from zeeguu_core_test.rules.base_rule import BaseRule
 from zeeguu_core.model.url import Url
+from zeeguu_core.server import db
 
 
 class UrlRule(BaseRule):
@@ -20,7 +21,7 @@ class UrlRule(BaseRule):
         random_url = self.faker.uri()
         random_title = self.faker.sentence()
 
-        url = Url.find_or_create(self.db.session, random_url, random_title)
+        url = Url.find_or_create(db.session, random_url, random_title)
 
         if self._exists_in_db(url):
             return self._create_model_object()

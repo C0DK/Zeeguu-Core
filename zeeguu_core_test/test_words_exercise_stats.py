@@ -1,7 +1,9 @@
+from zeeguu_core.model.bookmark_priority_arts import BookmarkPriorityARTS
+from zeeguu_core.server import db
+from zeeguu_core.word_scheduling import arts
+
 from zeeguu_core_test.model_test_mixin import ModelTestMixIn
 from zeeguu_core_test.rules.user_rule import UserRule
-from zeeguu_core.model.bookmark_priority_arts import BookmarkPriorityARTS
-from zeeguu_core.word_scheduling import arts
 
 
 class WordsExerciseStatsTest(ModelTestMixIn):
@@ -24,7 +26,7 @@ class WordsExerciseStatsTest(ModelTestMixIn):
         # GIVEN
 
         # WHEN
-        arts.update_bookmark_priority(self.db, self.user)
+        arts.update_bookmark_priority(db, self.user)
 
         # THEN
         result = self.__get_table_count(BookmarkPriorityARTS)
@@ -32,4 +34,4 @@ class WordsExerciseStatsTest(ModelTestMixIn):
             str(self.NUM_BOOKMARKS) + ' should be == to ' + str(result))
 
     def __get_table_count(self, cls):
-        return self.db.session.query(cls).count()
+        return db.session.query(cls).count()

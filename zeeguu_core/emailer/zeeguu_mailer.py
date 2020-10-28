@@ -1,7 +1,7 @@
 from smtplib import SMTP
 
 from zeeguu_api.server import app
-from zeeguu_core import logger
+from zeeguu_core.logs import info
 
 
 class ZeeguuMailer(object):
@@ -41,7 +41,7 @@ class ZeeguuMailer(object):
 
     @classmethod
     def send_mail(cls, subject, content_lines):
-        logger.info("Sending email...")
+        info("Sending email...")
         body = "\r\n".join(content_lines)
         mailer = ZeeguuMailer(subject, body, app.config.get('SMTP_USERNAME'))
         mailer.send()

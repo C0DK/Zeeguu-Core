@@ -10,7 +10,7 @@ import newspaper
 import re
 
 import zeeguu_core
-from zeeguu_core import log, debug
+from zeeguu_core.logs import log, debug
 
 from zeeguu_core import model
 from zeeguu_core.content_retriever.content_cleaner import cleanup_non_content_bits
