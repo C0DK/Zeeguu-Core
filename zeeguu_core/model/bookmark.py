@@ -317,11 +317,11 @@ class Bookmark(db.Model):
         :return:
         """
 
-        log = SortedExerciseLog(self)
-        is_learned = is_learned_based_on_exercise_outcomes(log)
+        exercise_log = SortedExerciseLog(self)
+        is_learned = is_learned_based_on_exercise_outcomes(exercise_log)
         if is_learned:
-            log(f"Log: {log.summary()}: bookmark {self.id} learned!")
-            self.learned_time = log.last_exercise_time()
+            log(f"Log: {exercise_log.summary()}: bookmark {self.id} learned!")
+            self.learned_time = exercise_log.last_exercise_time()
             self.learned = True
             session.add(self)
         else:

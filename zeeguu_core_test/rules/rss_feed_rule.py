@@ -41,8 +41,7 @@ class RSSFeedRule(BaseRule):
         image_url = UrlRule().url
         icon_name = self.faker.name()
 
-        new_rss_feed = RSSFeed(url, title, description,
-                               image_url, icon_name, language)
+        new_rss_feed = RSSFeed(url, title, description, image_url, icon_name, language)
 
         if RSSFeed.exists(new_rss_feed):
             return self._create_model_object()

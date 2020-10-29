@@ -10,7 +10,7 @@ import newspaper
 import re
 
 import zeeguu_core
-from zeeguu_core.logs import log, debug
+from zeeguu_core.logs import log, debug, warning
 
 from zeeguu_core import model
 from zeeguu_core.content_retriever.content_cleaner import cleanup_non_content_bits
@@ -78,7 +78,7 @@ def download_from_feed(feed: RSSFeed, session, limit=1000, save_in_elastic=True)
     try:
         items = feed.feed_items(last_retrieval_time_from_DB)
     except Exception as e:
-        log(f"Failed to download feed ({e})")
+        warning(f"Failed to download feed ({e})")
         return
 
     for feed_item in items:
@@ -123,9 +123,9 @@ def download_from_feed(feed: RSSFeed, session, limit=1000, save_in_elastic=True)
 
         except Exception as e:
             if hasattr(e, 'message'):
-                log(e.message)
+                warning(e.message)
             else:
-                log(e)
+                warning(e)
             continue
 
         # Saves the news article at ElasticSearch.

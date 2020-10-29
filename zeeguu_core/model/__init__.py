@@ -55,4 +55,3 @@ from zeeguu_core.model.bookmark_priority_arts import BookmarkPriorityARTS
 
 
 
-# TODO create a `__all__` dictionary

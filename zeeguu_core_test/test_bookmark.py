@@ -198,13 +198,13 @@ class BookmarkTest(ModelTestMixIn):
 
         correct_bookmark.update_learned_status(db.session)
 
-        log = SortedExerciseLog(correct_bookmark)
-        learned = is_learned_based_on_exercise_outcomes(log)
-        result_time = log.last_exercise_time()
+        exercise_log = SortedExerciseLog(correct_bookmark)
+        learned = is_learned_based_on_exercise_outcomes(exercise_log)
+        result_time = exercise_log.last_exercise_time()
         assert learned
 
-        log = SortedExerciseLog(correct_bookmark)
-        learned_time_from_log = log.last_exercise_time()
+        exercise_log = SortedExerciseLog(correct_bookmark)
+        learned_time_from_log = exercise_log.last_exercise_time()
         assert result_time == learned_time_from_log
 
         # A bookmark with no TOO EASY outcome or less than 5 correct exercises in a row returns False, None
@@ -212,8 +212,8 @@ class BookmarkTest(ModelTestMixIn):
         wrong_exercise.outcome = OutcomeRule().wrong
         random_bookmarks[3].add_new_exercise(wrong_exercise)
 
-        log = SortedExerciseLog(random_bookmarks[3])
-        learned = is_learned_based_on_exercise_outcomes(log)
+        exercise_log = SortedExerciseLog(random_bookmarks[3])
+        learned = is_learned_based_on_exercise_outcomes(exercise_log)
         assert not learned
 
     def test_top_bookmarks(self):

@@ -3,7 +3,7 @@ from datetime import datetime
 
 import feedparser
 import requests
-from zeeguu_core.logs import log
+from zeeguu_core.logs import log, debug
 import sqlalchemy.orm.exc
 from sqlalchemy.orm.exc import NoResultFound
 from zeeguu_core.constants import SIMPLE_TIME_FORMAT
@@ -155,10 +155,10 @@ class RSSFeed(db.Model):
 
         sorted_skipped_items = sorted(skipped_items, key= lambda x:x['published_datetime'])
         for each in sorted_skipped_items:
-            zeeguu_core.debug(f"- skipped: {each['published_datetime']} - {each['title']}")
+            debug(f"- skipped: {each['published_datetime']} - {each['title']}")
 
         for each in feed_items:
-            zeeguu_core.debug(f"- to download: {each['published_datetime']} - {each['title']}")
+            debug(f"- to download: {each['published_datetime']} - {each['title']}")
 
         log(f'*** Skipped due to time: {len(skipped_items)} ')
         log(f"*** To download: {len(feed_items)}")

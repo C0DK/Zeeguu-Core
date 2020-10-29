@@ -2,6 +2,7 @@ from faker import Faker
 from sqlalchemy.exc import InvalidRequestError
 
 from zeeguu_core.server import db
+from zeeguu_core.logs import warning
 
 
 class BaseRule:
@@ -26,7 +27,8 @@ class BaseRule:
         try:
             db.session.add(obj)
             db.session.commit()
-        except InvalidRequestError:
+        except InvalidRequestError as e:
+            warning(e)
             db.session.rollback()
             cls.save(obj)
 

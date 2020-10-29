@@ -19,7 +19,7 @@ load_configuration_or_abort(app, 'ZEEGUU_CORE_CONFIG',
 # Create the db object, which will be the superclass
 # of all the model classes
 db = flask_sqlalchemy.SQLAlchemy(app)
-#
+
 # Note that this must be called after all the model classes are loaded
 db.init_app(app)
 db.create_all(app=app)
