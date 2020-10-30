@@ -1,6 +1,7 @@
 import os
 
 import sys
+from zeeguu_core.logs import info
 
 
 class CouldNotLoadConfigsError(Exception):
@@ -22,15 +23,15 @@ def load_configuration_or_abort(app, environ_variable, mandatory_config_keys=[])
     if _called_from_within_a_test():
         _load_core_testing_configuration(app)
         _load_api_testing_configuration(app)
-        print("ZEEGUU: Loaded testing configuration.")
+        info("ZEEGUU: Loaded testing configuration.")
     else:
         try:
             config_file = _load_config_file(
                 environ_variable, mandatory_config_keys)
             app.config.from_pyfile(config_file, silent=False)
             _assert_configs(app.config, mandatory_config_keys, config_file)
-            print(("ZEEGUU: Loaded {0} config from {1}".format(
-                app.name, config_file)))
+            info("ZEEGUU: Loaded {0} config from {1}".format(
+                app.name, config_file))
         # TODO don't catch base class exception
         except Exception as e:
             raise CouldNotLoadConfigsError(e)

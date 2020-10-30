@@ -31,6 +31,7 @@ class Language(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     code = db.Column(db.String(5))
     name = db.Column(db.String(255), unique=True)
+    cached_articles = None
 
     def __init__(self, code, name):
         self.code = code
@@ -101,7 +102,7 @@ class Language(db.Model):
     def get_articles(self, after_date=None, most_recent_first=False, easiest_first=False):
         from zeeguu_core.model import Article
 
-        if hasattr(Language, 'cached_articles') and (self.cached_articles.get(self.id, None)):
+        if self.cached_articles is not None and (self.cached_articles.get(self.id, None)):
             logs.logp(f"found {len(Language.cached_articles[self.id])} cached articles for {self.name}")
             all_ids = Language.cached_articles[self.id]
             return Article.query.filter(Article.id.in_(all_ids)).all()
