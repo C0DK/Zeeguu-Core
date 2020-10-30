@@ -1,7 +1,7 @@
 import sqlalchemy
 from sqlalchemy import Column, String
 from sqlalchemy.orm.exc import NoResultFound
-from datetime import time
+import time
 
 from zeeguu_core.model import User
 from zeeguu_core.logs import info

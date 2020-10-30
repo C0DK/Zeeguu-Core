@@ -102,17 +102,11 @@ class Language(db.Model):
     def get_articles(self, after_date=None, most_recent_first=False, easiest_first=False):
         from zeeguu_core.model import Article
 
-        if self.cached_articles is not None and (self.cached_articles.get(self.id, None)):
-            logs.logp(f"found {len(Language.cached_articles[self.id])} cached articles for {self.name}")
-            all_ids = Language.cached_articles[self.id]
-            return Article.query.filter(Article.id.in_(all_ids)).all()
-
-        if not hasattr(Language, 'cached_articles'):
+        if Language.cached_articles is None:
             Language.cached_articles = {}
-
-        logs.logp("computing and caching the articles for language: " + self.name)
-        Language.cached_articles[self.id] = [each.id for each in
-                                             self._get_articles(after_date, most_recent_first, easiest_first)]
+            logs.logp("computing and caching the articles for language: " + self.name)
+            Language.cached_articles[self.id] = [each.id for each in
+                                                self._get_articles(after_date, most_recent_first, easiest_first)]
 
         all_ids = Language.cached_articles[self.id]
         return Article.query.filter(Article.id.in_(all_ids)).all()

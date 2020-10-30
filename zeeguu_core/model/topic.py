@@ -18,6 +18,8 @@ class Topic(db.Model):
 
     title = Column(String(64))
 
+    cached_articles = None
+
     def __init__(self, title):
         self.title = title
 
@@ -35,17 +37,11 @@ class Topic(db.Model):
 
         from zeeguu_core.model import Article
 
-        if hasattr(Topic, 'cached_articles') and (self.cached_articles.get(self.id, None)):
-            logs.logp(f"Topic: getting the cached articles for topic: {self.title}")
-            all_ids = Topic.cached_articles[self.id]
-            return Article.query.filter(Article.id.in_(all_ids)).all()
-
-        if not hasattr(Topic, 'cached_articles'):
+        if Topic.cached_articles is None:
             Topic.cached_articles = {}
-
-        logs.logp("computing and caching the articles for topic: " + self.title)
-        Topic.cached_articles[self.id] = [each.id for each in
-                                          Article.query.order_by(Article.published_time.desc()).filter(Article.topics.any(id=self.id)).limit(limit)]
+            logs.logp("computing and caching the articles for topic: " + self.title)
+            Topic.cached_articles[self.id] = [each.id for each in
+                                            Article.query.order_by(Article.published_time.desc()).filter(Article.topics.any(id=self.id)).limit(limit)]
 
         all_ids = Topic.cached_articles[self.id]
         return Article.query.filter(Article.id.in_(all_ids)).all()

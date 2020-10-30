@@ -1,0 +1,2484 @@
+digraph G {
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_537942245476849488" { subgraph "cluster_977420048373254297" { 1701671417889204227 [label="time_this: function", shape="component"]
+ label="zeeguu_core.util.timer_logging_decorator"
+ labeljust="l" }
+ label="zeeguu_core.util"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_-211592522148862164" { subgraph "cluster_836411469104226422" { -894040366398903279 [label="_assert_configs: function", shape="component"]
+ label="zeeguu_core.configuration.configuration"
+ labeljust="l" }
+ label="zeeguu_core.configuration"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_1231890269103608779" { -2146681093902705647 [label="UserWord: class", shape="component"]
+ label="zeeguu_core.model.user_word"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_1197683162262938366" { 1457864876087210007 [label="match: function", shape="component"]
+ label="re"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_312909064423460072" { subgraph "cluster_1940166453811732557" { -425876066097360869 [label="exists: function", shape="component"]
+ label="zeeguu_core.elastic.elastic_query_builder"
+ labeljust="l" }
+ label="zeeguu_core.elastic"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_1734846387126668638" { subgraph "cluster_-8532852935169980" { -1698790615559832543 [label="article_recommendations_for_user: function", shape="component"]
+ label="zeeguu_core.content_recommender.mixed_recommender"
+ labeljust="l" }
+ label="zeeguu_core.content_recommender"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_1197683162262938366" { -2095089085386986451 [label="findall: function", shape="component"]
+ label="re"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_1574818109612992442" { -1828363308378691537 [label="TopicFilter: class", shape="component"]
+ label="zeeguu_core.model.topic_filter"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_2110217354120131863" { subgraph "cluster_2141955903222764231" { 399616793870192688 [label="WordInteractionHistory: class", shape="component"]
+ label="zeeguu_core.model.word_knowledge.word_interaction_history"
+ labeljust="l" }
+ label="zeeguu_core.model.word_knowledge"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_617164831511925693" { subgraph "cluster_-595660595585458889" { -1818608045357778888 [label="quality_bookmark: function", shape="component"]
+ label="zeeguu_core.bookmark_quality.positive_qualities"
+ labeljust="l" }
+ label="zeeguu_core.bookmark_quality"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_1459347218746130293" { -489195511507742660 [label="Exercise: class", shape="component"]
+ label="zeeguu_core.model.exercise"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_2010045227184262781" { 2034444411335699517 [label="TopicSubscription: class", shape="component"]
+ label="zeeguu_core.model.topic_subscription"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_81439536298246149" { 273193415653321808 [label="log: function", shape="component"]
+ label="zeeguu_core.logs"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_1753983210828134711" { -1519312644109089709 [label="reversed: class", shape="component"]
+ label="builtins"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_1271851923960098249" { -260633193057723308 [label="UserReadingSession: class", shape="component"]
+ label="zeeguu_core.model.user_reading_session"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_537942245476849488" { subgraph "cluster_-538207713979620096" { -437605838100655019 [label="encode: function", shape="component"]
+ label="zeeguu_core.util.encoding"
+ labeljust="l" }
+ label="zeeguu_core.util"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_658983332623975548" { -2299665936476067747 [label="_get_past_translation: function", shape="component"]
+ label="zeeguu_core.crowd_translations"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_617164831511925693" { subgraph "cluster_-1724891485332600007" { -451981534481035170 [label="feedback_prevents_further_study: function", shape="component"]
+ label="zeeguu_core.bookmark_quality.fit_for_study"
+ labeljust="l" }
+ label="zeeguu_core.bookmark_quality"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_-1350678840019191115" { -1235462223147613089 [label="UserLanguage: class", shape="component"]
+ label="zeeguu_core.model.user_language"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-629064292836865675" { subgraph "cluster_-622998557481487945" { 2252380601587707997 [label="InterfaceError: class", shape="component"]
+ label="sqlalchemy.exc"
+ labeljust="l" }
+ label="sqlalchemy"
+ labeljust="l" }
+
+subgraph "cluster_-629064292836865675" { subgraph "cluster_-1032875006106451303" { subgraph "cluster_1821285572380528603" { -1956833572082739098 [label="not_: function", shape="component"]
+ label="sqlalchemy.sql.elements"
+ labeljust="l" }
+ label="sqlalchemy.sql"
+ labeljust="l" }
+ label="sqlalchemy"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_617164831511925693" { subgraph "cluster_406937089887976214" { -1913647039867810712 [label="context_is_too_long: function", shape="component"]
+ label="zeeguu_core.bookmark_quality.negative_qualities"
+ labeljust="l" }
+ label="zeeguu_core.bookmark_quality"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1533982508702473243" { -1559507257879451541 [label="basicConfig: function", shape="component"]
+ label="logging"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_617164831511925693" { subgraph "cluster_-1724891485332600007" { -51989444450108301 [label="fit_for_study: function", shape="component"]
+ label="zeeguu_core.bookmark_quality.fit_for_study"
+ labeljust="l" }
+ label="zeeguu_core.bookmark_quality"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_1427137345098514064" { subgraph "cluster_-711343289135375666" { subgraph "cluster_-218400660873113185" { 45239589122044043 [label="DefaultDifficultyEstimator: class", shape="component"]
+ label="zeeguu_core.language.strategies.default_difficulty_estimator"
+ labeljust="l" }
+ label="zeeguu_core.language.strategies"
+ labeljust="l" }
+ label="zeeguu_core.language"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_1753983210828134711" { -130260930344992628 [label="property: class", shape="component"]
+ label="builtins"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_312909064423460072" { subgraph "cluster_1940166453811732557" { -1959561510088328047 [label="add_to_dict: function", shape="component"]
+ label="zeeguu_core.elastic.elastic_query_builder"
+ labeljust="l" }
+ label="zeeguu_core.elastic"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_1753983210828134711" { 1322783442699495570 [label="dict: class", shape="component"]
+ label="builtins"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_-829020278868775364" { 2123942780979284118 [label="ExerciseOutcome: class", shape="component"]
+ label="zeeguu_core.model.exercise_outcome"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-629064292836865675" { subgraph "cluster_-1032875006106451303" { subgraph "cluster_1604492261178549054" { -2214146801009147752 [label="or_: function", shape="component"]
+ label="sqlalchemy.sql.expression"
+ labeljust="l" }
+ label="sqlalchemy.sql"
+ labeljust="l" }
+ label="sqlalchemy"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_-2264757640913117942" { 1765023377446732969 [label="BookmarkPriorityARTS: class", shape="component"]
+ label="zeeguu_core.model.bookmark_priority_arts"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-629064292836865675" { subgraph "cluster_-622998557481487945" { 271321308654211248 [label="IntegrityError: class", shape="component"]
+ label="sqlalchemy.exc"
+ labeljust="l" }
+ label="sqlalchemy"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_-716735007810407340" { -918813420689558347 [label="SortedExerciseLog: class", shape="component"]
+ label="zeeguu_core.model.SortedExerciseLog"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_1734846387126668638" { subgraph "cluster_-110877402135728876" { -1706528833192887106 [label="article_search_for_user: function", shape="component"]
+ label="zeeguu_core.content_recommender.elastic_first_recommender"
+ labeljust="l" }
+ label="zeeguu_core.content_recommender"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_1753983210828134711" { 512765813698377920 [label="NotImplementedError: class", shape="component"]
+ label="builtins"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_537942245476849488" { subgraph "cluster_1840951744580622457" { -647418641680043825 [label="split_unique_words_from_text: function", shape="component"]
+ label="zeeguu_core.util.text"
+ labeljust="l" }
+ label="zeeguu_core.util"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_1753983210828134711" { 2282885285660348641 [label="object: class", shape="component"]
+ label="builtins"
+ labeljust="l" }
+
+subgraph "cluster_-629064292836865675" { subgraph "cluster_-1032875006106451303" { subgraph "cluster_-2044194253382894767" { 888146268402952417 [label="Table: class", shape="component"]
+ label="sqlalchemy.sql.schema"
+ labeljust="l" }
+ label="sqlalchemy.sql"
+ labeljust="l" }
+ label="sqlalchemy"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_537942245476849488" { subgraph "cluster_-538207713979620096" { -305047407736564508 [label="encode_error: function", shape="component"]
+ label="zeeguu_core.util.encoding"
+ labeljust="l" }
+ label="zeeguu_core.util"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_305909291344717764" { -955507210792068891 [label="Counter: class", shape="component"]
+ label="collections"
+ labeljust="l" }
+
+subgraph "cluster_1753983210828134711" { -635044432046673687 [label="Exception: class", shape="component"]
+ label="builtins"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_1734846387126668638" { subgraph "cluster_-110877402135728876" { -1801135164760391439 [label="article_recommendations_for_user: function", shape="component"]
+ label="zeeguu_core.content_recommender.elastic_first_recommender"
+ labeljust="l" }
+ label="zeeguu_core.content_recommender"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_1734846387126668638" { subgraph "cluster_-8532852935169980" { 850429415586288886 [label="_recompute_recommender_cache: function", shape="component"]
+ label="zeeguu_core.content_recommender.mixed_recommender"
+ labeljust="l" }
+ label="zeeguu_core.content_recommender"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_617164831511925693" { subgraph "cluster_345418643215025493" { -467576328023830281 [label="top_bookmarks: function", shape="component"]
+ label="zeeguu_core.bookmark_quality.top_bookmarks_for_user"
+ labeljust="l" }
+ label="zeeguu_core.bookmark_quality"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_1427137345098514064" { subgraph "cluster_-711343289135375666" { subgraph "cluster_1031392776747781410" { -534396207801121537 [label="FleschKincaidDifficultyEstimator: class", shape="component"]
+ label="zeeguu_core.language.strategies.flesch_kincaid_difficulty_estimator"
+ labeljust="l" }
+ label="zeeguu_core.language.strategies"
+ labeljust="l" }
+ label="zeeguu_core.language"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_1753983210828134711" { 714942065363281152 [label="int: class", shape="component"]
+ label="builtins"
+ labeljust="l" }
+
+subgraph "cluster_-629064292836865675" { subgraph "cluster_-1032875006106451303" { subgraph "cluster_-2044194253382894767" { -1360991242792169209 [label="ForeignKey: class", shape="component"]
+ label="sqlalchemy.sql.schema"
+ labeljust="l" }
+ label="sqlalchemy.sql"
+ labeljust="l" }
+ label="sqlalchemy"
+ labeljust="l" }
+
+subgraph "cluster_-629064292836865675" { subgraph "cluster_-695359647608242214" { -770433925353812727 [label="relationship: function", shape="component"]
+ label="sqlalchemy.orm"
+ labeljust="l" }
+ label="sqlalchemy"
+ labeljust="l" }
+
+subgraph "cluster_-629064292836865675" { subgraph "cluster_-695359647608242214" { -770433925353812727 [label="relationship: function", shape="component"]
+ label="sqlalchemy.orm"
+ labeljust="l" }
+ label="sqlalchemy"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_790686689274656478" { 1984351433695494412 [label="TeacherCohortMap: class", shape="component"]
+ label="zeeguu_core.model.teacher_cohort_map"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_1427137345098514064" { subgraph "cluster_782296933752135064" { 2113685557668717839 [label="DifficultyEstimatorStrategy: class", shape="component"]
+ label="zeeguu_core.language.difficulty_estimator_strategy"
+ labeljust="l" }
+ label="zeeguu_core.language"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_658983332623975548" { -264372884264063722 [label="get_others_past_translation: function", shape="component"]
+ label="zeeguu_core.crowd_translations"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-629064292836865675" { subgraph "cluster_-695359647608242214" { -1870524471699691242 [label="backref: function", shape="component"]
+ label="sqlalchemy.orm"
+ labeljust="l" }
+ label="sqlalchemy"
+ labeljust="l" }
+
+subgraph "cluster_1290375802482794016" { -246086281135437533 [label="timedelta: class", shape="component"]
+ label="datetime"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_537942245476849488" { subgraph "cluster_1840951744580622457" { 1756007400721284393 [label="number_of_sentences: function", shape="component"]
+ label="zeeguu_core.util.text"
+ labeljust="l" }
+ label="zeeguu_core.util"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_1753983210828134711" { 1472693711295887658 [label="AttributeError: class", shape="component"]
+ label="builtins"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_-211592522148862164" { subgraph "cluster_836411469104226422" { -2291180980808496850 [label="load_configuration_or_abort: function", shape="component"]
+ label="zeeguu_core.configuration.configuration"
+ labeljust="l" }
+ label="zeeguu_core.configuration"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_1290375802482794016" { 1232118468067213618 [label="datetime: class", shape="component"]
+ label="datetime"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_617164831511925693" { subgraph "cluster_406937089887976214" { -1546418663227898567 [label="origin_is_a_very_short_word: function", shape="component"]
+ label="zeeguu_core.bookmark_quality.negative_qualities"
+ labeljust="l" }
+ label="zeeguu_core.bookmark_quality"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-629064292836865675" { subgraph "cluster_-1032875006106451303" { subgraph "cluster_-2044194253382894767" { 560472632230349113 [label="UniqueConstraint: class", shape="component"]
+ label="sqlalchemy.sql.schema"
+ labeljust="l" }
+ label="sqlalchemy.sql"
+ labeljust="l" }
+ label="sqlalchemy"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_1734846387126668638" { subgraph "cluster_-8532852935169980" { -2279884331532864194 [label="_find_articles_for_user: function", shape="component"]
+ label="zeeguu_core.content_recommender.mixed_recommender"
+ labeljust="l" }
+ label="zeeguu_core.content_recommender"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_537942245476849488" { subgraph "cluster_1840951744580622457" { -857095876265042619 [label="number_of_syllables: function", shape="component"]
+ label="zeeguu_core.util.text"
+ labeljust="l" }
+ label="zeeguu_core.util"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_81439536298246149" { -2032772660912776890 [label="logp: function", shape="component"]
+ label="zeeguu_core.logs"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_1654577389034536619" { -237901073599353528 [label="loads: function", shape="component"]
+ label="json"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_81439536298246149" { -723765030524180146 [label="debug: function", shape="component"]
+ label="zeeguu_core.logs"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_1753983210828134711" { -2133197562492579506 [label="map: class", shape="component"]
+ label="builtins"
+ labeljust="l" }
+
+subgraph "cluster_1557268761514993813" { -315053872562763437 [label="abstractmethod: function", shape="component"]
+ label="abc"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_-1004672860857807698" { 285773806890651988 [label="CohortArticleMap: class", shape="component"]
+ label="zeeguu_core.model.cohort_article_map"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_1753983210828134711" { 132039221550518614 [label="classmethod: class", shape="component"]
+ label="builtins"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_617164831511925693" { subgraph "cluster_406937089887976214" { -1695125427504669345 [label="origin_has_too_many_words: function", shape="component"]
+ label="zeeguu_core.bookmark_quality.negative_qualities"
+ labeljust="l" }
+ label="zeeguu_core.bookmark_quality"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_312909064423460072" { subgraph "cluster_1940166453811732557" { 2200348167636004198 [label="match: function", shape="component"]
+ label="zeeguu_core.elastic.elastic_query_builder"
+ labeljust="l" }
+ label="zeeguu_core.elastic"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1533982508702473243" { -1247955968468763281 [label="getLogger: function", shape="component"]
+ label="logging"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_81439536298246149" { -1196943813661822607 [label="critical: function", shape="component"]
+ label="zeeguu_core.logs"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_1936458962903876941" { 1911833547267631474 [label="Cohort: class", shape="component"]
+ label="zeeguu_core.model.cohort"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_537942245476849488" { subgraph "cluster_-538207713979620096" { -1365843051161895567 [label="JSONSerializable: class", shape="component"]
+ label="zeeguu_core.util.encoding"
+ labeljust="l" }
+ label="zeeguu_core.util"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_537942245476849488" { subgraph "cluster_977420048373254297" { -590506171559955087 [label="wrapper: function", shape="component"]
+ label="zeeguu_core.util.timer_logging_decorator"
+ labeljust="l" }
+ label="zeeguu_core.util"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_1494129200997801122" { 2218660940458430840 [label="SearchFilter: class", shape="component"]
+ label="zeeguu_core.model.search_filter"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-629064292836865675" { subgraph "cluster_-1032875006106451303" { subgraph "cluster_32647693606633127" { 237192500193758603 [label="Integer: class", shape="component"]
+ label="sqlalchemy.sql.sqltypes"
+ labeljust="l" }
+ label="sqlalchemy.sql"
+ labeljust="l" }
+ label="sqlalchemy"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_-211592522148862164" { subgraph "cluster_836411469104226422" { 1055448712746400150 [label="CouldNotLoadConfigsError: class", shape="component"]
+ label="zeeguu_core.configuration.configuration"
+ labeljust="l" }
+ label="zeeguu_core.configuration"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_1753983210828134711" { 1308931993420833177 [label="range: class", shape="component"]
+ label="builtins"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_617164831511925693" { subgraph "cluster_406937089887976214" { -1950562558651098724 [label="origin_is_subsumed_in_other_bookmark: function", shape="component"]
+ label="zeeguu_core.bookmark_quality.negative_qualities"
+ labeljust="l" }
+ label="zeeguu_core.bookmark_quality"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_537942245476849488" { subgraph "cluster_1840951744580622457" { -1689620990118251105 [label="average_sentence_length: function", shape="component"]
+ label="zeeguu_core.util.text"
+ labeljust="l" }
+ label="zeeguu_core.util"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_537942245476849488" { subgraph "cluster_1840951744580622457" { 1146371638175530409 [label="median_sentence_length: function", shape="component"]
+ label="zeeguu_core.util.text"
+ labeljust="l" }
+ label="zeeguu_core.util"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-629064292836865675" { subgraph "cluster_-1032875006106451303" { subgraph "cluster_-2044194253382894767" { -1973028797826483795 [label="PrimaryKeyConstraint: class", shape="component"]
+ label="sqlalchemy.sql.schema"
+ labeljust="l" }
+ label="sqlalchemy.sql"
+ labeljust="l" }
+ label="sqlalchemy"
+ labeljust="l" }
+
+subgraph "cluster_-448277174709725053" { subgraph "cluster_1340880201644398629" { -904796262378012241 [label="get: function", shape="component"]
+ label="requests.api"
+ labeljust="l" }
+ label="requests"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_1427137345098514064" { subgraph "cluster_899275952797435187" { -584061050406561335 [label="DifficultyEstimatorFactory: class", shape="component"]
+ label="zeeguu_core.language.difficulty_estimator_factory"
+ labeljust="l" }
+ label="zeeguu_core.language"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_2110217354120131863" { subgraph "cluster_2141955903222764231" { 1437909717024562636 [label="WordInteractionEvent: class", shape="component"]
+ label="zeeguu_core.model.word_knowledge.word_interaction_history"
+ labeljust="l" }
+ label="zeeguu_core.model.word_knowledge"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_1753983210828134711" { 2045835143141374416 [label="list: class", shape="component"]
+ label="builtins"
+ labeljust="l" }
+
+subgraph "cluster_-629064292836865675" { subgraph "cluster_-1032875006106451303" { subgraph "cluster_-2044194253382894767" { 421947180094602705 [label="Column: class", shape="component"]
+ label="sqlalchemy.sql.schema"
+ labeljust="l" }
+ label="sqlalchemy.sql"
+ labeljust="l" }
+ label="sqlalchemy"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_27469552224632800" { subgraph "cluster_-54333767541499189" { 1455671240983663058 [label="WatchEventType: class", shape="component"]
+ label="zeeguu_core.model.smartwatch.watch_event_type"
+ labeljust="l" }
+ label="zeeguu_core.model.smartwatch"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_1734846387126668638" { subgraph "cluster_-8532852935169980" { -152844484349210157 [label="_reading_preferences_hash: function", shape="component"]
+ label="zeeguu_core.content_recommender.mixed_recommender"
+ labeljust="l" }
+ label="zeeguu_core.content_recommender"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_-658120722319550140" { 1436022146629532128 [label="LocalizedTopic: class", shape="component"]
+ label="zeeguu_core.model.localized_topic"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_312909064423460072" { subgraph "cluster_1940166453811732557" { 1072579366019331556 [label="build_elastic_query: function", shape="component"]
+ label="zeeguu_core.elastic.elastic_query_builder"
+ labeljust="l" }
+ label="zeeguu_core.elastic"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-629064292836865675" { subgraph "cluster_-1032875006106451303" { subgraph "cluster_32647693606633127" { 2219889260664498669 [label="Boolean: class", shape="component"]
+ label="sqlalchemy.sql.sqltypes"
+ labeljust="l" }
+ label="sqlalchemy.sql"
+ labeljust="l" }
+ label="sqlalchemy"
+ labeljust="l" }
+
+subgraph "cluster_947039790452076825" { subgraph "cluster_-1351665314997381628" { -1573024274843648523 [label="sent_tokenize: function", shape="component"]
+ label="nltk.tokenize"
+ labeljust="l" }
+ label="nltk"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_617164831511925693" { subgraph "cluster_406937089887976214" { -2236039348540641779 [label="bad_quality_bookmark: function", shape="component"]
+ label="zeeguu_core.bookmark_quality.negative_qualities"
+ labeljust="l" }
+ label="zeeguu_core.bookmark_quality"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_617164831511925693" { subgraph "cluster_406937089887976214" { -397942280453555697 [label="translation_already_in_context_bug: function", shape="component"]
+ label="zeeguu_core.bookmark_quality.negative_qualities"
+ labeljust="l" }
+ label="zeeguu_core.bookmark_quality"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_1013641415430524753" { 1885058442007596569 [label="Language: class", shape="component"]
+ label="zeeguu_core.model.language"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_1959470443514456804" { -8939571482979791 [label="UserActivityData: class", shape="component"]
+ label="zeeguu_core.model.user_activitiy_data"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_-665519934826174092" { 2177997447846047282 [label="UserPreference: class", shape="component"]
+ label="zeeguu_core.model.user_preference"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_1753983210828134711" { 1250817618975450676 [label="KeyError: class", shape="component"]
+ label="builtins"
+ labeljust="l" }
+
+subgraph "cluster_1753983210828134711" { 2077777744361905721 [label="set: class", shape="component"]
+ label="builtins"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_1734846387126668638" { subgraph "cluster_1853971306168080215" { 1433003035937993274 [label="_to_articles_from_ES_hits: function", shape="component"]
+ label="zeeguu_core.content_recommender.elastic_recommender"
+ labeljust="l" }
+ label="zeeguu_core.content_recommender"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_617164831511925693" { subgraph "cluster_-595660595585458889" { -659795404072697276 [label="multiple_bookmarks_for_same_context: function", shape="component"]
+ label="zeeguu_core.bookmark_quality.positive_qualities"
+ labeljust="l" }
+ label="zeeguu_core.bookmark_quality"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1284084239255153545" { subgraph "cluster_-327270372244340407" { 824423514357530180 [label="Elasticsearch: class", shape="component"]
+ label="elasticsearch.client"
+ labeljust="l" }
+ label="elasticsearch"
+ labeljust="l" }
+
+subgraph "cluster_-629064292836865675" { subgraph "cluster_-1032875006106451303" { subgraph "cluster_32647693606633127" { -1402560769002255801 [label="UnicodeText: class", shape="component"]
+ label="sqlalchemy.sql.sqltypes"
+ labeljust="l" }
+ label="sqlalchemy.sql"
+ labeljust="l" }
+ label="sqlalchemy"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_2112585612630956789" { 201807330331309641 [label="UserArticle: class", shape="component"]
+ label="zeeguu_core.model.user_article"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_537942245476849488" { subgraph "cluster_1840951744580622457" { -360364847541291438 [label="average_word_length: function", shape="component"]
+ label="zeeguu_core.util.text"
+ labeljust="l" }
+ label="zeeguu_core.util"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_537942245476849488" { subgraph "cluster_1891074350401681810" { 1767278925034349152 [label="text_hash: function", shape="component"]
+ label="zeeguu_core.util.hash"
+ labeljust="l" }
+ label="zeeguu_core.util"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-629064292836865675" { subgraph "cluster_-695359647608242214" { subgraph "cluster_784237424411237170" { -442618927423525279 [label="aliased: function", shape="component"]
+ label="sqlalchemy.orm.util"
+ labeljust="l" }
+ label="sqlalchemy.orm"
+ labeljust="l" }
+ label="sqlalchemy"
+ labeljust="l" }
+
+subgraph "cluster_-1663108616840533829" { subgraph "cluster_-973443141540699700" { 42133143332102759 [label="Flask: class", shape="component"]
+ label="flask.app"
+ labeljust="l" }
+ label="flask"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_295760367958058521" { 336952108649870964 [label="Url: class", shape="component"]
+ label="zeeguu_core.model.url"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_617164831511925693" { subgraph "cluster_406937089887976214" { -700771290189919620 [label="origin_same_as_translation: function", shape="component"]
+ label="zeeguu_core.bookmark_quality.negative_qualities"
+ labeljust="l" }
+ label="zeeguu_core.bookmark_quality"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_1311425938011203707" { -1261139146006021507 [label="RSSFeed: class", shape="component"]
+ label="zeeguu_core.model.feed"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_-211592522148862164" { subgraph "cluster_836411469104226422" { 1083800093302664832 [label="_load_config_file: function", shape="component"]
+ label="zeeguu_core.configuration.configuration"
+ labeljust="l" }
+ label="zeeguu_core.configuration"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-89720713625883839" { subgraph "cluster_1758998907890657344" { -46361358994552187 [label="SortedList: class", shape="component"]
+ label="sortedcontainers.sortedlist"
+ labeljust="l" }
+ label="sortedcontainers"
+ labeljust="l" }
+
+subgraph "cluster_-629064292836865675" { subgraph "cluster_-1032875006106451303" { subgraph "cluster_32647693606633127" { 127477531600269968 [label="String: class", shape="component"]
+ label="sqlalchemy.sql.sqltypes"
+ labeljust="l" }
+ label="sqlalchemy.sql"
+ labeljust="l" }
+ label="sqlalchemy"
+ labeljust="l" }
+
+subgraph "cluster_-299758522489830306" { -728961406102531435 [label="Pyphen: class", shape="component"]
+ label="pyphen"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_-1836763380039718807" { -2243693590713017684 [label="User: class", shape="component"]
+ label="zeeguu_core.model.user"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_1734846387126668638" { subgraph "cluster_-8532852935169980" { -1184041119835924818 [label="_get_articles_for_search_term: function", shape="component"]
+ label="zeeguu_core.content_recommender.mixed_recommender"
+ labeljust="l" }
+ label="zeeguu_core.content_recommender"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_1729240892723584427" { 871628799316387503 [label="SQLAlchemy: class", shape="component"]
+ label="flask_sqlalchemy"
+ labeljust="l" }
+
+subgraph "cluster_1753983210828134711" { -2097972560766448976 [label="str: class", shape="component"]
+ label="builtins"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_537942245476849488" { subgraph "cluster_1840951744580622457" { 801799016292644533 [label="unique_length: function", shape="component"]
+ label="zeeguu_core.util.text"
+ labeljust="l" }
+ label="zeeguu_core.util"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_119765629049512986" { subgraph "cluster_575979428341568493" { -473947602764272971 [label="Word: class", shape="component"]
+ label="wordstats.word_stats"
+ labeljust="l" }
+ label="wordstats"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_-1195572396005901983" { -1130526069296827719 [label="Teacher: class", shape="component"]
+ label="zeeguu_core.model.teacher"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_-1321379556294857950" { 1438444780663816896 [label="RSSFeedRegistration: class", shape="component"]
+ label="zeeguu_core.model.feed_registrations"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_1049594194145933731" { -1072904511761200447 [label="ArticlesCache: class", shape="component"]
+ label="zeeguu_core.model.articles_cache"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_1339561198041666515" { subgraph "cluster_-1365974860535405159" { -47061089757942074 [label="findall: function", shape="component"]
+ label="regex.regex"
+ labeljust="l" }
+ label="regex"
+ labeljust="l" }
+
+subgraph "cluster_1753983210828134711" { 108392966500989640 [label="TypeError: class", shape="component"]
+ label="builtins"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_658983332623975548" { 999315531762213577 [label="own_or_crowdsourced_translation: function", shape="component"]
+ label="zeeguu_core.crowd_translations"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_-211592522148862164" { subgraph "cluster_836411469104226422" { -1895791041238534454 [label="_load_api_testing_configuration: function", shape="component"]
+ label="zeeguu_core.configuration.configuration"
+ labeljust="l" }
+ label="zeeguu_core.configuration"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_1049594194145933731" { -534773073675377973 [label="calculate_hash: function", shape="component"]
+ label="zeeguu_core.model.articles_cache"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_1753983210828134711" { 867353806804607707 [label="bool: class", shape="component"]
+ label="builtins"
+ labeljust="l" }
+
+subgraph "cluster_-1663108616840533829" { subgraph "cluster_-357928797071175136" { -930980150859447576 [label="make_response: function", shape="component"]
+ label="flask.helpers"
+ labeljust="l" }
+ label="flask"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_-1199328293709791315" { 2240860211157927663 [label="Bookmark: class", shape="component"]
+ label="zeeguu_core.model.bookmark"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_-233963374395363899" { -1299049531586755854 [label="SearchSubscription: class", shape="component"]
+ label="zeeguu_core.model.search_subscription"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_81439536298246149" { 687878294404514559 [label="info: function", shape="component"]
+ label="zeeguu_core.logs"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_1654577389034536619" { -1478328889370436861 [label="dumps: function", shape="component"]
+ label="json"
+ labeljust="l" }
+
+subgraph "cluster_-629064292836865675" { subgraph "cluster_-622998557481487945" { -1887831897000938748 [label="DatabaseError: class", shape="component"]
+ label="sqlalchemy.exc"
+ labeljust="l" }
+ label="sqlalchemy"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_537942245476849488" { subgraph "cluster_1840951744580622457" { 149217265660882713 [label="split_words_from_text: function", shape="component"]
+ label="zeeguu_core.util.text"
+ labeljust="l" }
+ label="zeeguu_core.util"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_1734846387126668638" { subgraph "cluster_-8532852935169980" { 1196278031320707869 [label="_get_user_articles_sources_languages: function", shape="component"]
+ label="zeeguu_core.content_recommender.mixed_recommender"
+ labeljust="l" }
+ label="zeeguu_core.content_recommender"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_537942245476849488" { subgraph "cluster_1840951744580622457" { -1729452932385050832 [label="median_word_length: function", shape="component"]
+ label="zeeguu_core.util.text"
+ labeljust="l" }
+ label="zeeguu_core.util"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_280597379092034266" { -517061384417921228 [label="Session: class", shape="component"]
+ label="zeeguu_core.model.session"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_1734846387126668638" { subgraph "cluster_1853971306168080215" { -2142129465670276299 [label="article_recommendations_for_user: function", shape="component"]
+ label="zeeguu_core.content_recommender.elastic_recommender"
+ labeljust="l" }
+ label="zeeguu_core.content_recommender"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-629064292836865675" { subgraph "cluster_-302302432444078986" { subgraph "cluster_2193725392103175689" { subgraph "cluster_368361659632547102" { 1611160580145340220 [label="Model: class", shape="component"]
+ label="sqlalchemy.ext.declarative.api"
+ labeljust="l" }
+ label="sqlalchemy.ext.declarative"
+ labeljust="l" }
+ label="sqlalchemy.ext"
+ labeljust="l" }
+ label="sqlalchemy"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_-12102055532941369" { 167885624839547709 [label="Text: class", shape="component"]
+ label="zeeguu_core.model.text"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_1197683162262938366" { 479196242580040515 [label="sub: function", shape="component"]
+ label="re"
+ labeljust="l" }
+
+subgraph "cluster_-779265272395108833" { subgraph "cluster_-510904376594801061" { 1014492950042768205 [label="parse: function", shape="component"]
+ label="feedparser.api"
+ labeljust="l" }
+ label="feedparser"
+ labeljust="l" }
+
+subgraph "cluster_-629064292836865675" { subgraph "cluster_-695359647608242214" { subgraph "cluster_2129163978151317336" { -472359929446016167 [label="validates: function", shape="component"]
+ label="sqlalchemy.orm.mapper"
+ labeljust="l" }
+ label="sqlalchemy.orm"
+ labeljust="l" }
+ label="sqlalchemy"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_153631861791734806" { 1572147971201263459 [label="UserExerciseSession: class", shape="component"]
+ label="zeeguu_core.model.user_exercise_session"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_658983332623975548" { -82253024255459482 [label="get_own_past_translation: function", shape="component"]
+ label="zeeguu_core.crowd_translations"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_1734846387126668638" { subgraph "cluster_-8532852935169980" { -128175224419497113 [label="_recompute_recommender_cache_if_needed: function", shape="component"]
+ label="zeeguu_core.content_recommender.mixed_recommender"
+ labeljust="l" }
+ label="zeeguu_core.content_recommender"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_-1527282618282199367" { 2102356683341070186 [label="UniqueCode: class", shape="component"]
+ label="zeeguu_core.model.unique_code"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_1734846387126668638" { subgraph "cluster_1853971306168080215" { 650465119654960007 [label="_list_to_string: function", shape="component"]
+ label="zeeguu_core.content_recommender.elastic_recommender"
+ labeljust="l" }
+ label="zeeguu_core.content_recommender"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_-211592522148862164" { subgraph "cluster_836411469104226422" { -294993445937017972 [label="_load_core_testing_configuration: function", shape="component"]
+ label="zeeguu_core.configuration.configuration"
+ labeljust="l" }
+ label="zeeguu_core.configuration"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_1753983210828134711" { 1676460635491268493 [label="staticmethod: class", shape="component"]
+ label="builtins"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_1734846387126668638" { subgraph "cluster_1853971306168080215" { 955437347033037714 [label="more_like_this_article: function", shape="component"]
+ label="zeeguu_core.content_recommender.elastic_recommender"
+ labeljust="l" }
+ label="zeeguu_core.content_recommender"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_1753983210828134711" { 838014271330974614 [label="bytes: class", shape="component"]
+ label="builtins"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_636925369711624145" { 1843213471213023127 [label="ExerciseSource: class", shape="component"]
+ label="zeeguu_core.model.exercise_source"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_-1177498428570919817" { subgraph "cluster_-343390084103822652" { -1147723659130775655 [label="is_learned_based_on_exercise_outcomes: function", shape="component"]
+ label="zeeguu_core.definition_of_learned.is_learned"
+ labeljust="l" }
+ label="zeeguu_core.definition_of_learned"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_870674346306833122" { -1168506430649613405 [label="Article: class", shape="component"]
+ label="zeeguu_core.model.article"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_-211592522148862164" { subgraph "cluster_836411469104226422" { 1618946200797162405 [label="_called_from_within_a_test: function", shape="component"]
+ label="zeeguu_core.configuration.configuration"
+ labeljust="l" }
+ label="zeeguu_core.configuration"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-629064292836865675" { subgraph "cluster_-1032875006106451303" { subgraph "cluster_1604492261178549054" { -1921161978602871897 [label="desc: function", shape="component"]
+ label="sqlalchemy.sql.expression"
+ labeljust="l" }
+ label="sqlalchemy.sql"
+ labeljust="l" }
+ label="sqlalchemy"
+ labeljust="l" }
+
+subgraph "cluster_1753983210828134711" { 967668368255902636 [label="filter: class", shape="component"]
+ label="builtins"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_537942245476849488" { subgraph "cluster_1891074350401681810" { -1085677932834986065 [label="password_hash: function", shape="component"]
+ label="zeeguu_core.util.hash"
+ labeljust="l" }
+ label="zeeguu_core.util"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_286307861771321113" { -338149671356701774 [label="Topic: class", shape="component"]
+ label="zeeguu_core.model.topic"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_1931301161193602248" { 2240588827193853880 [label="ArticleWord: class", shape="component"]
+ label="zeeguu_core.model.article_word"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_537942245476849488" { subgraph "cluster_1840951744580622457" { -586221181893566535 [label="length: function", shape="component"]
+ label="zeeguu_core.util.text"
+ labeljust="l" }
+ label="zeeguu_core.util"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-629064292836865675" { subgraph "cluster_-1032875006106451303" { subgraph "cluster_32647693606633127" { -364569402753914951 [label="DateTime: class", shape="component"]
+ label="sqlalchemy.sql.sqltypes"
+ labeljust="l" }
+ label="sqlalchemy.sql"
+ labeljust="l" }
+ label="sqlalchemy"
+ labeljust="l" }
+
+subgraph "cluster_-629064292836865675" { subgraph "cluster_-695359647608242214" { subgraph "cluster_-19839703158875564" { -1299785759118230598 [label="NoResultFound: class", shape="component"]
+ label="sqlalchemy.orm.exc"
+ labeljust="l" }
+ label="sqlalchemy.orm"
+ labeljust="l" }
+ label="sqlalchemy"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_264763784826322765" { 2004113685653995454 [label="Search: class", shape="component"]
+ label="zeeguu_core.model.search"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_312909064423460072" { subgraph "cluster_1940166453811732557" { 1089891585631282111 [label="build_more_like_this_query: function", shape="component"]
+ label="zeeguu_core.elastic.elastic_query_builder"
+ labeljust="l" }
+ label="zeeguu_core.elastic"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_1197683162262938366" { -799699487642137671 [label="split: function", shape="component"]
+ label="re"
+ labeljust="l" }
+
+subgraph "cluster_-629064292836865675" { subgraph "cluster_-695359647608242214" { subgraph "cluster_-19839703158875564" { -1497439516818433090 [label="MultipleResultsFound: class", shape="component"]
+ label="sqlalchemy.orm.exc"
+ labeljust="l" }
+ label="sqlalchemy.orm"
+ labeljust="l" }
+ label="sqlalchemy"
+ labeljust="l" }
+
+subgraph "cluster_947039790452076825" { subgraph "cluster_-1395363173831669957" { subgraph "cluster_958187727890487684" { 121940616327697355 [label="SnowballStemmer: class", shape="component"]
+ label="nltk.stem.snowball"
+ labeljust="l" }
+ label="nltk.stem"
+ labeljust="l" }
+ label="nltk"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_81439536298246149" { 1494552739554127822 [label="warning: function", shape="component"]
+ label="zeeguu_core.logs"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_617164831511925693" { subgraph "cluster_-595660595585458889" { 809860098949911513 [label="quality_top_bookmark: function", shape="component"]
+ label="zeeguu_core.bookmark_quality.positive_qualities"
+ labeljust="l" }
+ label="zeeguu_core.bookmark_quality"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_1525705772310634965" { subgraph "cluster_2137005137865359040" { -1572104963658373159 [label="detect: function", shape="component"]
+ label="langdetect.detector_factory"
+ labeljust="l" }
+ label="langdetect"
+ labeljust="l" }
+
+subgraph "cluster_1753983210828134711" { -2022779532669207584 [label="ValueError: class", shape="component"]
+ label="builtins"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_27469552224632800" { subgraph "cluster_-219506126207914493" { -2210613567914072090 [label="WatchInteractionEvent: class", shape="component"]
+ label="zeeguu_core.model.smartwatch.watch_interaction_event"
+ labeljust="l" }
+ label="zeeguu_core.model.smartwatch"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_1734846387126668638" { subgraph "cluster_-8532852935169980" { -1604184283992328210 [label="article_search_for_user: function", shape="component"]
+ label="zeeguu_core.content_recommender.mixed_recommender"
+ labeljust="l" }
+ label="zeeguu_core.content_recommender"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_682756915019983592" { subgraph "cluster_429160750504135789" { 197559824065468398 [label="DomainName: class", shape="component"]
+ label="zeeguu_core.model.domain_name"
+ labeljust="l" }
+ label="zeeguu_core.model"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_1734846387126668638" { subgraph "cluster_-8532852935169980" { -1758518481168094221 [label="_filter_subscribed_articles: function", shape="component"]
+ label="zeeguu_core.content_recommender.mixed_recommender"
+ labeljust="l" }
+ label="zeeguu_core.content_recommender"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+
+subgraph "cluster_-1240851906876614481" { subgraph "cluster_537942245476849488" { subgraph "cluster_-538207713979620096" { -1760860917547317260 [label="_encoder: function", shape="component"]
+ label="zeeguu_core.util.encoding"
+ labeljust="l" }
+ label="zeeguu_core.util"
+ labeljust="l" }
+ label="zeeguu_core"
+ labeljust="l" }
+"-1801135164760391439" -> "-2032772660912776890"
+
+"1436022146629532128" -> "-1360991242792169209"
+
+"-8939571482979791" -> "127477531600269968"
+
+"-2146681093902705647" -> "-1360991242792169209"
+
+"201807330331309641" -> "-1360991242792169209"
+
+"-489195511507742660" -> "2123942780979284118"
+
+"-517061384417921228" -> "-1921161978602871897"
+
+"2177997447846047282" -> "-770433925353812727"
+
+"1885058442007596569" -> "421947180094602705"
+
+"2177997447846047282" -> "132039221550518614"
+
+"-1261139146006021507" -> "1885058442007596569"
+
+"1455671240983663058" -> "1322783442699495570"
+
+"-1261139146006021507" -> "-1360991242792169209"
+
+"-260633193057723308" -> "1676460635491268493"
+
+"-2236039348540641779" -> "-397942280453555697"
+
+"-489195511507742660" -> "-770433925353812727"
+
+"-2243693590713017684" -> "714942065363281152"
+
+"-338149671356701774" -> "-635044432046673687"
+
+"-338149671356701774" -> "-2097972560766448976"
+
+"-1261139146006021507" -> "-904796262378012241"
+
+"399616793870192688" -> "1322783442699495570"
+
+"-1729452932385050832" -> "1885058442007596569"
+
+"336952108649870964" -> "-2095089085386986451"
+
+"-1959561510088328047" -> "1322783442699495570"
+
+"-260633193057723308" -> "132039221550518614"
+
+"2177997447846047282" -> "1308931993420833177"
+
+"-8939571482979791" -> "-2097972560766448976"
+
+"2034444411335699517" -> "-1299785759118230598"
+
+"-1261139146006021507" -> "1611160580145340220"
+
+"-2291180980808496850" -> "1083800093302664832"
+
+"-584061050406561335" -> "45239589122044043"
+
+"-857095876265042619" -> "-728961406102531435"
+
+"399616793870192688" -> "-1360991242792169209"
+
+"-1168506430649613405" -> "132039221550518614"
+
+"1438444780663816896" -> "1611160580145340220"
+
+"-534396207801121537" -> "149217265660882713"
+
+"2218660940458430840" -> "967668368255902636"
+
+"399616793870192688" -> "-2146681093902705647"
+
+"-918813420689558347" -> "2045835143141374416"
+
+"197559824065468398" -> "271321308654211248"
+
+"-1828363308378691537" -> "132039221550518614"
+
+"-1168506430649613405" -> "-364569402753914951"
+
+"-260633193057723308" -> "-770433925353812727"
+
+"2177997447846047282" -> "-1299785759118230598"
+
+"-1072904511761200447" -> "237192500193758603"
+
+"-2291180980808496850" -> "-294993445937017972"
+
+"-1235462223147613089" -> "-2243693590713017684"
+
+"-2299665936476067747" -> "-2097972560766448976"
+
+"1765023377446732969" -> "132039221550518614"
+
+"1911833547267631474" -> "421947180094602705"
+
+"336952108649870964" -> "-1887831897000938748"
+
+"-2236039348540641779" -> "-700771290189919620"
+
+"201807330331309641" -> "1611160580145340220"
+
+"-2279884331532864194" -> "-1758518481168094221"
+
+"167885624839547709" -> "1885058442007596569"
+
+"-1072904511761200447" -> "1676460635491268493"
+
+"2123942780979284118" -> "1611160580145340220"
+
+"399616793870192688" -> "-1402560769002255801"
+
+"-437605838100655019" -> "-1478328889370436861"
+
+"1436022146629532128" -> "237192500193758603"
+
+"1911833547267631474" -> "273193415653321808"
+
+"-305047407736564508" -> "-930980150859447576"
+
+"-1698790615559832543" -> "-1519312644109089709"
+
+"-1828363308378691537" -> "560472632230349113"
+
+"2034444411335699517" -> "421947180094602705"
+
+"-2291180980808496850" -> "1618946200797162405"
+
+"336952108649870964" -> "1611160580145340220"
+
+"167885624839547709" -> "-799699487642137671"
+
+"-534396207801121537" -> "1322783442699495570"
+
+"2004113685653995454" -> "-635044432046673687"
+
+"2123942780979284118" -> "421947180094602705"
+
+"850429415586288886" -> "-2279884331532864194"
+
+"1436022146629532128" -> "967668368255902636"
+
+"-1706528833192887106" -> "-2032772660912776890"
+
+"1436022146629532128" -> "132039221550518614"
+
+"1911833547267631474" -> "2219889260664498669"
+
+"1438444780663816896" -> "-1261139146006021507"
+
+"-8939571482979791" -> "-364569402753914951"
+
+"1765023377446732969" -> "1611160580145340220"
+
+"2218660940458430840" -> "-1360991242792169209"
+
+"-338149671356701774" -> "132039221550518614"
+
+"-1729452932385050832" -> "-857095876265042619"
+
+"-2210613567914072090" -> "132039221550518614"
+
+"-517061384417921228" -> "1322783442699495570"
+
+"-1261139146006021507" -> "273193415653321808"
+
+"1885058442007596569" -> "-1299785759118230598"
+
+"-2210613567914072090" -> "-1360991242792169209"
+
+"-8939571482979791" -> "-2243693590713017684"
+
+"2240860211157927663" -> "-1360991242792169209"
+
+"336952108649870964" -> "967668368255902636"
+
+"-1168506430649613405" -> "127477531600269968"
+
+"-517061384417921228" -> "-770433925353812727"
+
+"-360364847541291438" -> "-586221181893566535"
+
+"2240860211157927663" -> "-635044432046673687"
+
+"-2243693590713017684" -> "1308931993420833177"
+
+"201807330331309641" -> "1322783442699495570"
+
+"285773806890651988" -> "-1360991242792169209"
+
+"-2243693590713017684" -> "1494552739554127822"
+
+"2240860211157927663" -> "-51989444450108301"
+
+"-2243693590713017684" -> "-246086281135437533"
+
+"-1261139146006021507" -> "421947180094602705"
+
+"-1168506430649613405" -> "-1887831897000938748"
+
+"1984351433695494412" -> "-770433925353812727"
+
+"2034444411335699517" -> "-338149671356701774"
+
+"-517061384417921228" -> "1611160580145340220"
+
+"336952108649870964" -> "-2097972560766448976"
+
+"-338149671356701774" -> "237192500193758603"
+
+"-2142129465670276299" -> "-590506171559955087"
+
+"2240588827193853880" -> "-635044432046673687"
+
+"2240588827193853880" -> "-1887831897000938748"
+
+"1572147971201263459" -> "1322783442699495570"
+
+"1911833547267631474" -> "1611160580145340220"
+
+"-1299049531586755854" -> "560472632230349113"
+
+"-2243693590713017684" -> "-1085677932834986065"
+
+"-1261139146006021507" -> "-770433925353812727"
+
+"-1072904511761200447" -> "967668368255902636"
+
+"-338149671356701774" -> "1322783442699495570"
+
+"801799016292644533" -> "-647418641680043825"
+
+"-264372884264063722" -> "-2299665936476067747"
+
+"-2146681093902705647" -> "421947180094602705"
+
+"-260633193057723308" -> "1322783442699495570"
+
+"1765023377446732969" -> "421947180094602705"
+
+"2123942780979284118" -> "-2097972560766448976"
+
+"336952108649870964" -> "421947180094602705"
+
+"-2032772660912776890" -> "273193415653321808"
+
+"-1085677932834986065" -> "1308931993420833177"
+
+"1885058442007596569" -> "132039221550518614"
+
+"-1758518481168094221" -> "967668368255902636"
+
+"-2210613567914072090" -> "967668368255902636"
+
+"801799016292644533" -> "1885058442007596569"
+
+"2004113685653995454" -> "127477531600269968"
+
+"2240588827193853880" -> "-1870524471699691242"
+
+"1083800093302664832" -> "1250817618975450676"
+
+"-1168506430649613405" -> "271321308654211248"
+
+"-534396207801121537" -> "132039221550518614"
+
+"2123942780979284118" -> "-1299785759118230598"
+
+"1885058442007596569" -> "1611160580145340220"
+
+"-2236039348540641779" -> "-1950562558651098724"
+
+"-8939571482979791" -> "-1168506430649613405"
+
+"-2146681093902705647" -> "-2097972560766448976"
+
+"-1168506430649613405" -> "-635044432046673687"
+
+"1572147971201263459" -> "1611160580145340220"
+
+"201807330331309641" -> "-2243693590713017684"
+
+"2034444411335699517" -> "1611160580145340220"
+
+"-1261139146006021507" -> "1322783442699495570"
+
+"2034444411335699517" -> "967668368255902636"
+
+"167885624839547709" -> "-1168506430649613405"
+
+"336952108649870964" -> "197559824065468398"
+
+"-2243693590713017684" -> "421947180094602705"
+
+"2218660940458430840" -> "1611160580145340220"
+
+"-534396207801121537" -> "2113685557668717839"
+
+"2240860211157927663" -> "-2097972560766448976"
+
+"-2243693590713017684" -> "-2133197562492579506"
+
+"2102356683341070186" -> "132039221550518614"
+
+"2034444411335699517" -> "-2243693590713017684"
+
+"-2210613567914072090" -> "1611160580145340220"
+
+"1984351433695494412" -> "-1299785759118230598"
+
+"-8939571482979791" -> "273193415653321808"
+
+"-467576328023830281" -> "967668368255902636"
+
+"1984351433695494412" -> "421947180094602705"
+
+"1089891585631282111" -> "-1959561510088328047"
+
+"-1818608045357778888" -> "-2236039348540641779"
+
+"1437909717024562636" -> "1676460635491268493"
+
+"2218660940458430840" -> "-770433925353812727"
+
+"-918813420689558347" -> "2282885285660348641"
+
+"-1729452932385050832" -> "714942065363281152"
+
+"2240860211157927663" -> "167885624839547709"
+
+"-1261139146006021507" -> "-635044432046673687"
+
+"-1072904511761200447" -> "132039221550518614"
+
+"-489195511507742660" -> "-2097972560766448976"
+
+"201807330331309641" -> "421947180094602705"
+
+"2177997447846047282" -> "687878294404514559"
+
+"1455671240983663058" -> "132039221550518614"
+
+"2240860211157927663" -> "-489195511507742660"
+
+"1438444780663816896" -> "132039221550518614"
+
+"2004113685653995454" -> "1322783442699495570"
+
+"-8939571482979791" -> "237192500193758603"
+
+"-489195511507742660" -> "1843213471213023127"
+
+"1756007400721284393" -> "-1573024274843648523"
+
+"2102356683341070186" -> "1611160580145340220"
+
+"1455671240983663058" -> "1611160580145340220"
+
+"399616793870192688" -> "132039221550518614"
+
+"-894040366398903279" -> "1055448712746400150"
+
+"2102356683341070186" -> "967668368255902636"
+
+"1437909717024562636" -> "714942065363281152"
+
+"-1235462223147613089" -> "-1299785759118230598"
+
+"-2243693590713017684" -> "-770433925353812727"
+
+"-2243693590713017684" -> "1885058442007596569"
+
+"-128175224419497113" -> "-152844484349210157"
+
+"2240860211157927663" -> "1843213471213023127"
+
+"2218660940458430840" -> "132039221550518614"
+
+"-534396207801121537" -> "-955507210792068891"
+
+"-1130526069296827719" -> "1611160580145340220"
+
+"1438444780663816896" -> "-1299785759118230598"
+
+"-1299049531586755854" -> "-635044432046673687"
+
+"-1299049531586755854" -> "132039221550518614"
+
+"-8939571482979791" -> "1611160580145340220"
+
+"-2243693590713017684" -> "-1360991242792169209"
+
+"-8939571482979791" -> "1322783442699495570"
+
+"-2291180980808496850" -> "-635044432046673687"
+
+"45239589122044043" -> "-2097972560766448976"
+
+"-8939571482979791" -> "-237901073599353528"
+
+"167885624839547709" -> "271321308654211248"
+
+"-2243693590713017684" -> "2077777744361905721"
+
+"-1235462223147613089" -> "421947180094602705"
+
+"201807330331309641" -> "-1299785759118230598"
+
+"-2243693590713017684" -> "1232118468067213618"
+
+"-2146681093902705647" -> "1885058442007596569"
+
+"-534396207801121537" -> "-1573024274843648523"
+
+"167885624839547709" -> "-2097972560766448976"
+
+"-360364847541291438" -> "1885058442007596569"
+
+"197559824065468398" -> "687878294404514559"
+
+"-2243693590713017684" -> "-2097972560766448976"
+
+"-1130526069296827719" -> "421947180094602705"
+
+"2123942780979284118" -> "-130260930344992628"
+
+"-2243693590713017684" -> "1611160580145340220"
+
+"2004113685653995454" -> "-2097972560766448976"
+
+"-260633193057723308" -> "-1299785759118230598"
+
+"1765023377446732969" -> "-770433925353812727"
+
+"-338149671356701774" -> "967668368255902636"
+
+"197559824065468398" -> "1611160580145340220"
+
+"2177997447846047282" -> "-2243693590713017684"
+
+"-437605838100655019" -> "-1760860917547317260"
+
+"167885624839547709" -> "132039221550518614"
+
+"1572147971201263459" -> "-1360991242792169209"
+
+"1572147971201263459" -> "867353806804607707"
+
+"201807330331309641" -> "-364569402753914951"
+
+"336952108649870964" -> "-635044432046673687"
+
+"-1299049531586755854" -> "-2243693590713017684"
+
+"1984351433695494412" -> "-1360991242792169209"
+
+"1843213471213023127" -> "421947180094602705"
+
+"-260633193057723308" -> "1611160580145340220"
+
+"-1706528833192887106" -> "-1604184283992328210"
+
+"201807330331309641" -> "-1168506430649613405"
+
+"2240860211157927663" -> "-1299785759118230598"
+
+"-2236039348540641779" -> "-1695125427504669345"
+
+"399616793870192688" -> "967668368255902636"
+
+"1083800093302664832" -> "1055448712746400150"
+
+"2240860211157927663" -> "-2095089085386986451"
+
+"-1130526069296827719" -> "-770433925353812727"
+
+"-51989444450108301" -> "-451981534481035170"
+
+"336952108649870964" -> "-770433925353812727"
+
+"-2243693590713017684" -> "-723765030524180146"
+
+"-260633193057723308" -> "-246086281135437533"
+
+"-1235462223147613089" -> "237192500193758603"
+
+"-517061384417921228" -> "714942065363281152"
+
+"2240860211157927663" -> "-770433925353812727"
+
+"167885624839547709" -> "336952108649870964"
+
+"-489195511507742660" -> "421947180094602705"
+
+"336952108649870964" -> "2252380601587707997"
+
+"2177997447846047282" -> "2077777744361905721"
+
+"-260633193057723308" -> "867353806804607707"
+
+"-647418641680043825" -> "149217265660882713"
+
+"2240860211157927663" -> "-1147723659130775655"
+
+"1984351433695494412" -> "132039221550518614"
+
+"167885624839547709" -> "2252380601587707997"
+
+"285773806890651988" -> "-770433925353812727"
+
+"2034444411335699517" -> "-1360991242792169209"
+
+"-857095876265042619" -> "714942065363281152"
+
+"1572147971201263459" -> "-1299785759118230598"
+
+"-1130526069296827719" -> "-2243693590713017684"
+
+"2177997447846047282" -> "-2097972560766448976"
+
+"201807330331309641" -> "-2214146801009147752"
+
+"-1235462223147613089" -> "-770433925353812727"
+
+"2240588827193853880" -> "-770433925353812727"
+
+"-647418641680043825" -> "2077777744361905721"
+
+"-1168506430649613405" -> "2045835143141374416"
+
+"-1168506430649613405" -> "-1572104963658373159"
+
+"197559824065468398" -> "1308931993420833177"
+
+"2177997447846047282" -> "-1360991242792169209"
+
+"-1184041119835924818" -> "2077777744361905721"
+
+"1455671240983663058" -> "421947180094602705"
+
+"-2146681093902705647" -> "714942065363281152"
+
+"2177997447846047282" -> "127477531600269968"
+
+"-1698790615559832543" -> "-128175224419497113"
+
+"-260633193057723308" -> "-1168506430649613405"
+
+"-2243693590713017684" -> "-2022779532669207584"
+
+"-1299049531586755854" -> "-1360991242792169209"
+
+"-1760860917547317260" -> "108392966500989640"
+
+"-2146681093902705647" -> "967668368255902636"
+
+"-2299665936476067747" -> "-2243693590713017684"
+
+"-8939571482979791" -> "-770433925353812727"
+
+"-1828363308378691537" -> "-770433925353812727"
+
+"1438444780663816896" -> "-770433925353812727"
+
+"-2146681093902705647" -> "132039221550518614"
+
+"-534396207801121537" -> "714942065363281152"
+
+"-1729452932385050832" -> "149217265660882713"
+
+"1437909717024562636" -> "2282885285660348641"
+
+"-1604184283992328210" -> "-1184041119835924818"
+
+"2177997447846047282" -> "421947180094602705"
+
+"1911833547267631474" -> "237192500193758603"
+
+"-1758518481168094221" -> "-1956833572082739098"
+
+"2113685557668717839" -> "132039221550518614"
+
+"-1072904511761200447" -> "127477531600269968"
+
+"201807330331309641" -> "-635044432046673687"
+
+"1436022146629532128" -> "-770433925353812727"
+
+"1911833547267631474" -> "132039221550518614"
+
+"1885058442007596569" -> "-635044432046673687"
+
+"399616793870192688" -> "1885058442007596569"
+
+"336952108649870964" -> "1308931993420833177"
+
+"1438444780663816896" -> "421947180094602705"
+
+"2113685557668717839" -> "-315053872562763437"
+
+"-8939571482979791" -> "-1360991242792169209"
+
+"1767278925034349152" -> "-2097972560766448976"
+
+"2240588827193853880" -> "2252380601587707997"
+
+"285773806890651988" -> "1911833547267631474"
+
+"1572147971201263459" -> "-1497439516818433090"
+
+"-8939571482979791" -> "2219889260664498669"
+
+"201807330331309641" -> "2219889260664498669"
+
+"-1828363308378691537" -> "-2243693590713017684"
+
+"-1828363308378691537" -> "967668368255902636"
+
+"197559824065468398" -> "-1887831897000938748"
+
+"-51989444450108301" -> "-1147723659130775655"
+
+"-1760860917547317260" -> "-1365843051161895567"
+
+"1572147971201263459" -> "-770433925353812727"
+
+"285773806890651988" -> "-1168506430649613405"
+
+"-1828363308378691537" -> "421947180094602705"
+
+"-2146681093902705647" -> "1308931993420833177"
+
+"-2243693590713017684" -> "1322783442699495570"
+
+"197559824065468398" -> "-1299785759118230598"
+
+"1885058442007596569" -> "-2032772660912776890"
+
+"1436022146629532128" -> "1611160580145340220"
+
+"-1689620990118251105" -> "-586221181893566535"
+
+"399616793870192688" -> "1611160580145340220"
+
+"336952108649870964" -> "560472632230349113"
+
+"-857095876265042619" -> "1885058442007596569"
+
+"-260633193057723308" -> "-2243693590713017684"
+
+"399616793870192688" -> "-2243693590713017684"
+
+"285773806890651988" -> "-1973028797826483795"
+
+"2240860211157927663" -> "2123942780979284118"
+
+"1984351433695494412" -> "237192500193758603"
+
+"-260633193057723308" -> "421947180094602705"
+
+"336952108649870964" -> "-1299785759118230598"
+
+"-128175224419497113" -> "687878294404514559"
+
+"149217265660882713" -> "-47061089757942074"
+
+"399616793870192688" -> "-770433925353812727"
+
+"167885624839547709" -> "-1887831897000938748"
+
+"1436022146629532128" -> "421947180094602705"
+
+"2240860211157927663" -> "967668368255902636"
+
+"-2210613567914072090" -> "2240860211157927663"
+
+"-489195511507742660" -> "967668368255902636"
+
+"-1235462223147613089" -> "2219889260664498669"
+
+"809860098949911513" -> "-659795404072697276"
+
+"2123942780979284118" -> "-635044432046673687"
+
+"2240588827193853880" -> "-1299785759118230598"
+
+"-517061384417921228" -> "-2097972560766448976"
+
+"336952108649870964" -> "271321308654211248"
+
+"399616793870192688" -> "-237901073599353528"
+
+"-517061384417921228" -> "-1299785759118230598"
+
+"201807330331309641" -> "237192500193758603"
+
+"-260633193057723308" -> "-2097972560766448976"
+
+"-1706528833192887106" -> "-590506171559955087"
+
+"2240860211157927663" -> "132039221550518614"
+
+"-260633193057723308" -> "-1360991242792169209"
+
+"-2299665936476067747" -> "-635044432046673687"
+
+"-2291180980808496850" -> "1055448712746400150"
+
+"2240588827193853880" -> "271321308654211248"
+
+"167885624839547709" -> "-1299785759118230598"
+
+"-517061384417921228" -> "132039221550518614"
+
+"285773806890651988" -> "132039221550518614"
+
+"-1261139146006021507" -> "967668368255902636"
+
+"1885058442007596569" -> "1232118468067213618"
+
+"-534396207801121537" -> "-728961406102531435"
+
+"2240860211157927663" -> "-2243693590713017684"
+
+"197559824065468398" -> "-2095089085386986451"
+
+"-338149671356701774" -> "-2032772660912776890"
+
+"-2243693590713017684" -> "132039221550518614"
+
+"955437347033037714" -> "1089891585631282111"
+
+"-1168506430649613405" -> "1611160580145340220"
+
+"-1758518481168094221" -> "-2214146801009147752"
+
+"2240588827193853880" -> "1611160580145340220"
+
+"-918813420689558347" -> "2077777744361905721"
+
+"-2243693590713017684" -> "-1299785759118230598"
+
+"2218660940458430840" -> "421947180094602705"
+
+"-260633193057723308" -> "967668368255902636"
+
+"399616793870192688" -> "421947180094602705"
+
+"2240860211157927663" -> "1232118468067213618"
+
+"2102356683341070186" -> "421947180094602705"
+
+"-1072904511761200447" -> "1611160580145340220"
+
+"167885624839547709" -> "-1360991242792169209"
+
+"-1261139146006021507" -> "336952108649870964"
+
+"2004113685653995454" -> "132039221550518614"
+
+"-1168506430649613405" -> "1322783442699495570"
+
+"1885058442007596569" -> "967668368255902636"
+
+"336952108649870964" -> "-1360991242792169209"
+
+"-1604184283992328210" -> "2077777744361905721"
+
+"45239589122044043" -> "132039221550518614"
+
+"-338149671356701774" -> "1611160580145340220"
+
+"1572147971201263459" -> "-246086281135437533"
+
+"2004113685653995454" -> "967668368255902636"
+
+"1572147971201263459" -> "-2097972560766448976"
+
+"1843213471213023127" -> "132039221550518614"
+
+"167885624839547709" -> "1767278925034349152"
+
+"-2210613567914072090" -> "-770433925353812727"
+
+"2034444411335699517" -> "-770433925353812727"
+
+"-1085677932834986065" -> "-2097972560766448976"
+
+"-1072904511761200447" -> "-770433925353812727"
+
+"-1235462223147613089" -> "967668368255902636"
+
+"1911833547267631474" -> "-770433925353812727"
+
+"-82253024255459482" -> "-2097972560766448976"
+
+"-51989444450108301" -> "-918813420689558347"
+
+"201807330331309641" -> "560472632230349113"
+
+"-1365843051161895567" -> "2282885285660348641"
+
+"2218660940458430840" -> "-2243693590713017684"
+
+"1572147971201263459" -> "1676460635491268493"
+
+"1055448712746400150" -> "-635044432046673687"
+
+"1438444780663816896" -> "967668368255902636"
+
+"-305047407736564508" -> "-437605838100655019"
+
+"-1801135164760391439" -> "-1698790615559832543"
+
+"-467576328023830281" -> "809860098949911513"
+
+"-51989444450108301" -> "-1818608045357778888"
+
+"-1261139146006021507" -> "1014492950042768205"
+
+"-338149671356701774" -> "127477531600269968"
+
+"2240860211157927663" -> "-2146681093902705647"
+
+"-1299049531586755854" -> "967668368255902636"
+
+"999315531762213577" -> "-2097972560766448976"
+
+"45239589122044043" -> "2113685557668717839"
+
+"1911833547267631474" -> "-1360991242792169209"
+
+"-517061384417921228" -> "-1360991242792169209"
+
+"2240860211157927663" -> "1472693711295887658"
+
+"1146371638175530409" -> "714942065363281152"
+
+"-1299049531586755854" -> "-1299785759118230598"
+
+"-584061050406561335" -> "-534396207801121537"
+
+"1984351433695494412" -> "-2243693590713017684"
+
+"201807330331309641" -> "132039221550518614"
+
+"167885624839547709" -> "1308931993420833177"
+
+"399616793870192688" -> "1437909717024562636"
+
+"1089891585631282111" -> "2200348167636004198"
+
+"2004113685653995454" -> "1611160580145340220"
+
+"1072579366019331556" -> "-425876066097360869"
+
+"1984351433695494412" -> "1911833547267631474"
+
+"-1828363308378691537" -> "-338149671356701774"
+
+"2218660940458430840" -> "560472632230349113"
+
+"1438444780663816896" -> "-2243693590713017684"
+
+"-584061050406561335" -> "2113685557668717839"
+
+"-264372884264063722" -> "-2097972560766448976"
+
+"167885624839547709" -> "967668368255902636"
+
+"2240860211157927663" -> "1322783442699495570"
+
+"1843213471213023127" -> "1611160580145340220"
+
+"2218660940458430840" -> "-635044432046673687"
+
+"999315531762213577" -> "-82253024255459482"
+
+"-647418641680043825" -> "121940616327697355"
+
+"-857095876265042619" -> "149217265660882713"
+
+"2240860211157927663" -> "714942065363281152"
+
+"1436022146629532128" -> "-2097972560766448976"
+
+"1911833547267631474" -> "967668368255902636"
+
+"2240860211157927663" -> "273193415653321808"
+
+"1911833547267631474" -> "1885058442007596569"
+
+"197559824065468398" -> "2252380601587707997"
+
+"1843213471213023127" -> "-635044432046673687"
+
+"-2146681093902705647" -> "-770433925353812727"
+
+"285773806890651988" -> "421947180094602705"
+
+"-2243693590713017684" -> "237192500193758603"
+
+"-1801135164760391439" -> "-635044432046673687"
+
+"-1299049531586755854" -> "421947180094602705"
+
+"-1130526069296827719" -> "237192500193758603"
+
+"-517061384417921228" -> "421947180094602705"
+
+"45239589122044043" -> "1322783442699495570"
+
+"1765023377446732969" -> "967668368255902636"
+
+"-584061050406561335" -> "-2097972560766448976"
+
+"-1168506430649613405" -> "-1870524471699691242"
+
+"1984351433695494412" -> "1611160580145340220"
+
+"1196278031320707869" -> "687878294404514559"
+
+"-1168506430649613405" -> "-1299785759118230598"
+
+"-8939571482979791" -> "714942065363281152"
+
+"167885624839547709" -> "-770433925353812727"
+
+"-1758518481168094221" -> "2077777744361905721"
+
+"399616793870192688" -> "237192500193758603"
+
+"-2210613567914072090" -> "1322783442699495570"
+
+"201807330331309641" -> "-770433925353812727"
+
+"2034444411335699517" -> "560472632230349113"
+
+"2218660940458430840" -> "-1299785759118230598"
+
+"-1604184283992328210" -> "1196278031320707869"
+
+"-2243693590713017684" -> "1457864876087210007"
+
+"2004113685653995454" -> "237192500193758603"
+
+"1146371638175530409" -> "-1573024274843648523"
+
+"955437347033037714" -> "1433003035937993274"
+
+"-1168506430649613405" -> "237192500193758603"
+
+"-128175224419497113" -> "850429415586288886"
+
+"-1261139146006021507" -> "-1299785759118230598"
+
+"2240860211157927663" -> "237192500193758603"
+
+"2113685557668717839" -> "-2097972560766448976"
+
+"-2146681093902705647" -> "-1365843051161895567"
+
+"-1299049531586755854" -> "1611160580145340220"
+
+"-8939571482979791" -> "421947180094602705"
+
+"-1828363308378691537" -> "1611160580145340220"
+
+"-1168506430649613405" -> "-1360991242792169209"
+
+"-489195511507742660" -> "1611160580145340220"
+
+"-1168506430649613405" -> "-1402560769002255801"
+
+"-1706528833192887106" -> "-635044432046673687"
+
+"-1168506430649613405" -> "273193415653321808"
+
+"1911833547267631474" -> "-2097972560766448976"
+
+"197559824065468398" -> "421947180094602705"
+
+"-2291180980808496850" -> "-1895791041238534454"
+
+"2123942780979284118" -> "132039221550518614"
+
+"-2291180980808496850" -> "-894040366398903279"
+
+"-1168506430649613405" -> "1308931993420833177"
+
+"2240588827193853880" -> "237192500193758603"
+
+"2240860211157927663" -> "1611160580145340220"
+
+"-360364847541291438" -> "-857095876265042619"
+
+"2240588827193853880" -> "421947180094602705"
+
+"197559824065468398" -> "967668368255902636"
+
+"-1365843051161895567" -> "512765813698377920"
+
+"285773806890651988" -> "237192500193758603"
+
+"-1698790615559832543" -> "-46361358994552187"
+
+"2102356683341070186" -> "-2097972560766448976"
+
+"2240860211157927663" -> "-918813420689558347"
+
+"-82253024255459482" -> "-2299665936476067747"
+
+"-1801135164760391439" -> "-2142129465670276299"
+
+"-338149671356701774" -> "421947180094602705"
+
+"-517061384417921228" -> "-2243693590713017684"
+
+"850429415586288886" -> "-1072904511761200447"
+
+"1572147971201263459" -> "132039221550518614"
+
+"-2243693590713017684" -> "2045835143141374416"
+
+"-1072904511761200447" -> "421947180094602705"
+
+"-2243693590713017684" -> "-1478328889370436861"
+
+"2240588827193853880" -> "127477531600269968"
+
+"-584061050406561335" -> "132039221550518614"
+
+"-1261139146006021507" -> "-723765030524180146"
+
+"-586221181893566535" -> "149217265660882713"
+
+"-2146681093902705647" -> "1611160580145340220"
+
+"-1698790615559832543" -> "-152844484349210157"
+
+"-534396207801121537" -> "-2097972560766448976"
+
+"2034444411335699517" -> "132039221550518614"
+
+"399616793870192688" -> "-1478328889370436861"
+
+"1072579366019331556" -> "2200348167636004198"
+
+"1436022146629532128" -> "127477531600269968"
+
+"-8939571482979791" -> "132039221550518614"
+
+"-489195511507742660" -> "-1360991242792169209"
+
+"-1261139146006021507" -> "-2097972560766448976"
+
+"-489195511507742660" -> "132039221550518614"
+
+"-1235462223147613089" -> "1611160580145340220"
+
+"1765023377446732969" -> "2240860211157927663"
+
+"-517061384417921228" -> "967668368255902636"
+
+"-2210613567914072090" -> "421947180094602705"
+
+"-152844484349210157" -> "-534773073675377973"
+
+"-2146681093902705647" -> "-1299785759118230598"
+
+"-2236039348540641779" -> "-1546418663227898567"
+
+"955437347033037714" -> "824423514357530180"
+
+"-1689620990118251105" -> "1756007400721284393"
+
+"1572147971201263459" -> "967668368255902636"
+
+"-1168506430649613405" -> "421947180094602705"
+
+"-1261139146006021507" -> "132039221550518614"
+
+"285773806890651988" -> "1611160580145340220"
+
+"-1085677932834986065" -> "838014271330974614"
+
+"2240588827193853880" -> "132039221550518614"
+
+"-2146681093902705647" -> "560472632230349113"
+
+"1572147971201263459" -> "421947180094602705"
+
+"197559824065468398" -> "132039221550518614"
+
+"999315531762213577" -> "-264372884264063722"
+
+"197559824065468398" -> "-2097972560766448976"
+
+"-1828363308378691537" -> "-1299785759118230598"
+
+"399616793870192688" -> "560472632230349113"
+
+"-1168506430649613405" -> "-770433925353812727"
+
+"-1828363308378691537" -> "-1360991242792169209"
+
+"1146371638175530409" -> "-586221181893566535"
+
+"1572147971201263459" -> "-2243693590713017684"
+
+"1885058442007596569" -> "1322783442699495570"
+
+"201807330331309641" -> "967668368255902636"
+
+"2177997447846047282" -> "1611160580145340220"
+
+"167885624839547709" -> "1611160580145340220"
+
+"-2236039348540641779" -> "-1913647039867810712"
+
+"-1072904511761200447" -> "-635044432046673687"
+
+"-260633193057723308" -> "-1497439516818433090"
+
+"1765023377446732969" -> "-1360991242792169209"
+
+"2004113685653995454" -> "421947180094602705"
+
+"-2243693590713017684" -> "967668368255902636"
+
+"-1261139146006021507" -> "1472693711295887658"
+
+"-1072904511761200447" -> "2045835143141374416"
+
+"-1130526069296827719" -> "132039221550518614"
+
+"-1235462223147613089" -> "-1360991242792169209"
+
+"-857095876265042619" -> "-955507210792068891"
+
+"-1168506430649613405" -> "-2097972560766448976"
+
+"-1072904511761200447" -> "-1360991242792169209"
+
+"336952108649870964" -> "132039221550518614"
+
+"2240860211157927663" -> "421947180094602705"
+
+"399616793870192688" -> "714942065363281152"
+
+"-647418641680043825" -> "1885058442007596569"
+
+"167885624839547709" -> "421947180094602705"
+
+"2240588827193853880" -> "967668368255902636"
+
+"1843213471213023127" -> "-1299785759118230598"
+
+"-1261139146006021507" -> "1232118468067213618"
+
+"-1072904511761200447" -> "-2097972560766448976"
+
+"399616793870192688" -> "-1299785759118230598"
+
+"273193415653321808" -> "687878294404514559"
+
+"-1235462223147613089" -> "132039221550518614"
+
+"-1299049531586755854" -> "-770433925353812727"
+
+"-1130526069296827719" -> "-1360991242792169209"
+
+"1701671417889204227" -> "687878294404514559"
+
+"-2243693590713017684" -> "-472359929446016167"
+
+"-1168506430649613405" -> "967668368255902636"
+
+"1438444780663816896" -> "-1360991242792169209"
+
+"-8939571482979791" -> "967668368255902636"
+
+"-2291180980808496850" -> "687878294404514559"
+
+"-1168506430649613405" -> "714942065363281152"
+}
